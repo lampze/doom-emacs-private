@@ -1,13 +1,5 @@
 ;;; private/shirui/init.el -*- lexical-binding: t; -*-
 
-(setq doom-font (font-spec :family "Hack" :size 19)
-      doom-unicode-font (font-spec :family "文泉驿等宽微米黑" :size 19)
-      frame-resize-pixelwise t
-      )
-
-(toggle-frame-maximized)
-
-
 ;; purcell utils - start
 (if (fboundp 'with-eval-after-load)
     (defalias 'after-load 'with-eval-after-load)
@@ -31,7 +23,22 @@ locate PACKAGE."
 ;; purcell utils - end
 
 
-;; edit start
+;; my set - start
+(setq doom-font (font-spec :family "Hack" :size 19)
+      doom-unicode-font (font-spec :family "文泉驿等宽微米黑" :size 19)
+      frame-resize-pixelwise t
+      )
+
+(toggle-frame-maximized)
+
+(add-hook 'doom-init-hook '+workspace/load-session)
+
+(after-load 'emmet-mode
+  (define-key emmet-mode-keymap (kbd "C-j") 'emmet-expand-line))
+;; my set - end
+
+
+;; edit - start
 (global-set-key (kbd "RET") 'newline-and-indent)
 (defun sanityinc/newline-at-end-of-line ()
   "Move to end of line, enter a newline, and reindent."
@@ -40,10 +47,10 @@ locate PACKAGE."
   (newline-and-indent))
 
 (global-set-key (kbd "S-<return>") 'sanityinc/newline-at-end-of-line)
-;; edit end
+;; edit - end
 
 
-;; company start
+;; company - start
 (after-load 'company
   (define-key company-mode-map (kbd "M-/") 'company-complete)
   (define-key company-active-map (kbd "M-/") 'company-select-next)
@@ -51,7 +58,7 @@ locate PACKAGE."
   (define-key company-active-map (kbd "C-p") 'company-select-previous)
   (setq-default company-dabbrev-other-buffers 'all
                 company-tooltip-align-annotations t))
-;; company end
+;; company - end
 
 
 (doom! :feature
