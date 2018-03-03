@@ -29,6 +29,8 @@ locate PACKAGE."
       frame-resize-pixelwise t
       )
 
+(delete-selection-mode)
+
 (toggle-frame-maximized)
 
 (add-hook 'doom-init-hook '+workspace/load-session)
@@ -59,6 +61,16 @@ locate PACKAGE."
   (setq-default company-dabbrev-other-buffers 'all
                 company-tooltip-align-annotations t))
 ;; company - end
+
+
+;; git - start
+(setq-default magit-diff-refine-hunk t)
+
+(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
+
+(add-hook 'git-commit-mode-hook 'goto-address-mode)
+;; git - end
 
 
 (doom! :feature
