@@ -29,8 +29,6 @@ locate PACKAGE."
       frame-resize-pixelwise t
       )
 
-(delete-selection-mode)
-
 (toggle-frame-maximized)
 
 (add-hook 'doom-init-hook '+workspace/load-session)
@@ -49,6 +47,8 @@ locate PACKAGE."
   (newline-and-indent))
 
 (global-set-key (kbd "S-<return>") 'sanityinc/newline-at-end-of-line)
+
+(delete-selection-mode)
 ;; edit - end
 
 
