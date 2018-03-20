@@ -62,7 +62,7 @@
       ;clojure           ; java with a lisp
        csharp            ; unity, .NET, and mono shenanigans
        data              ; config/data formats
-       elixir            ; erlang done right
+      ;elixir            ; erlang done right
        elm               ; care for a cup of TEA?
        emacs-lisp        ; drown in parentheses
        ess               ; emacs speaks statistics
@@ -198,7 +198,10 @@ locate PACKAGE."
 
   (setq web-mode-markup-indent-offset 2
         web-mode-css-indent-offset 2
-        web-mode-code-indent-offset 2)
+        web-mode-code-indent-offset 2
+        )
+
+  (setq js-indent-level 2)
   )
 ;; web - end
 
