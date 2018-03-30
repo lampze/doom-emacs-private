@@ -32,12 +32,12 @@
        doom-quit         ; DOOM quit-message prompts when you quit Emacs
        hl-todo           ; highlight TODO/FIXME/NOTE tags
        nav-flash         ; blink the current line after jumping
+       posframe          ; use child frames where possible (Emacs 26+ only)
       ;evil-goggles      ; display visual hints when editing in evil
       ;unicode           ; extended unicode support for various languages
       ;tabbar            ; FIXME an (incomplete) tab bar for Emacs
       ;vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        window-select     ; visually switch windows
-       posframe
 
        :tools
        dired             ; making dired pretty [functional]
@@ -48,9 +48,11 @@
       ;impatient-mode    ; show off code over HTTP
       ;macos             ; MacOS-specific commands
        make              ; run make tasks from Emacs
+       magit             ;
        neotree           ; a project drawer, like NERDTree for vim
       ;password-store    ; password manager for nerds
        pdf               ; pdf enhancements
+       rgb               ; creating color strings
        rotate-text       ; cycle region at point between text candidates
        term              ; terminals in Emacs
       ;tmux              ; an API for interacting with tmux
