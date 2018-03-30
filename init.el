@@ -37,6 +37,7 @@
       ;tabbar            ; FIXME an (incomplete) tab bar for Emacs
       ;vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        window-select     ; visually switch windows
+       posframe
 
        :tools
        dired             ; making dired pretty [functional]
@@ -77,13 +78,13 @@
       ;lua               ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore
       ;ocaml             ; an objective camel
-       ;; (org              ; organize your plain life in plain text
-       ;;  +attach          ; custom attachment system
-       ;;  +babel           ; running code in org
-       ;;  +capture         ; org-capture in and outside of Emacs
-       ;;  +export          ; Exporting org to whatever you want
-       ;;  +present         ; Emacs for presentations
-       ;;  +publish)        ; Emacs+Org as a static site generator
+       (org              ; organize your plain life in plain text
+        +attach          ; custom attachment system
+        +babel           ; running code in org
+        +capture         ; org-capture in and outside of Emacs
+        +export          ; Exporting org to whatever you want
+        +present         ; Emacs for presentations
+        +publish)        ; Emacs+Org as a static site generator
       ;perl              ; write code no one else can comprehend
       ;php               ; perl's insecure younger brother
        plantuml          ; diagrams for confusing people more
@@ -148,9 +149,9 @@ locate PACKAGE."
       frame-resize-pixelwise t
       )
 
-(toggle-frame-maximized)
+(add-hook 'doom-post-init-hook '+workspace/load-session)
 
-(add-hook 'doom-init-hook '+workspace/load-session)
+(toggle-frame-maximized)
 
 (after-load 'emmet-mode
   (define-key emmet-mode-keymap (kbd "C-j") 'emmet-expand-line))
