@@ -121,91 +121,13 @@
        (default +snippets)
        )
 
-
-;; purcell utils - start
-(if (fboundp 'with-eval-after-load)
-    (defalias 'after-load 'with-eval-after-load)
-  (defmacro after-load (feature &rest body)
-    "After FEATURE is loaded, evaluate BODY."
-    (declare (indent defun))
-    `(eval-after-load ,feature
-       '(progn ,@body))))
-
-(defun maybe-require-package (package &optional min-version no-refresh)
-  "Try to install PACKAGE, and return non-nil if successful.
-In the event of failure, return nil and print a warning message.
-Optionally require MIN-VERSION.  If NO-REFRESH is non-nil, the
-available package lists will not be re-downloaded in order to
-locate PACKAGE."
-  (condition-case err
-      (require-package package min-version no-refresh)
-    (error
-     (message "Couldn't install optional package `%s': %S" package err)
-     nil)))
-;; purcell utils - end
-
-
-;; my set - start
 (setq doom-font (font-spec :family "Hack" :size 19)
+      doom-variable-pitch-font (font-spec :family "Hack")
       doom-unicode-font (font-spec :family "文泉驿等宽微米黑" :size 19)
+      doom-big-font (font-spec :family "Hack" :size 24)
       frame-resize-pixelwise t
       )
 
 (add-hook 'doom-post-init-hook '+workspace/load-session)
 
 (toggle-frame-maximized)
-
-(after-load 'emmet-mode
-  (define-key emmet-mode-keymap (kbd "C-j") 'emmet-expand-line))
-;; my set - end
-
-
-;; edit - start
-(global-set-key (kbd "RET") 'newline-and-indent)
-(defun sanityinc/newline-at-end-of-line ()
-  "Move to end of line, enter a newline, and reindent."
-  (interactive)
-  (move-end-of-line 1)
-  (newline-and-indent))
-
-(global-set-key (kbd "S-<return>") 'sanityinc/newline-at-end-of-line)
-
-(delete-selection-mode)
-;; edit - end
-
-
-;; company - start
-(after-load 'company
-  (define-key company-mode-map (kbd "M-/") 'company-complete)
-  (define-key company-active-map (kbd "M-/") 'company-select-next)
-  (define-key company-active-map (kbd "C-n") 'company-select-next)
-  (define-key company-active-map (kbd "C-p") 'company-select-previous)
-  (setq-default company-dabbrev-other-buffers 'all
-                company-tooltip-align-annotations t))
-;; company - end
-
-
-;; git - start
-(setq-default magit-diff-refine-hunk t)
-
-(global-set-key (kbd "C-x g") 'magit-status)
-(global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
-
-(add-hook 'git-commit-mode-hook 'goto-address-mode)
-;; git - end
-
-
-;; web - start
-(when (featurep! :lang web)
-  (global-set-key (kbd "C-c C-v") 'browse-url-of-buffer)
-
-  (setq web-mode-markup-indent-offset 2
-        web-mode-css-indent-offset 2
-        web-mode-code-indent-offset 2
-        )
-
-  (setq js-indent-level 2)
-  )
-;; web - end
-
-
