@@ -1,11 +1,21 @@
 ;;;  -*- lexical-binding: t; -*-
 
+(load! +paredit)
+
 ;; Smooth mouse scrolling
 (setq mouse-wheel-scroll-amount '(2 ((shift) . 1))  ; scroll two lines at a time
       mouse-wheel-progressive-speed nil             ; don't accelerate scrolling
       mouse-wheel-follow-mouse t                    ; scroll window under mouse
       scroll-step 1)
 
+
+;; Backups
+(setq make-backup-files t
+      backup-by-copying t
+      delete-old-versions t
+      kept-new-versions 6
+      kept-old-versions 2
+      version-control t)
 
 ;; edit
 (global-set-key (kbd "RET") 'newline-and-indent)
@@ -46,9 +56,9 @@
   (setq web-mode-markup-indent-offset 2
         web-mode-css-indent-offset 2
         web-mode-code-indent-offset 2
+        js-indent-level 2
+        tern-command '("tern" "--no-port-file")
         )
-
-  (setq js-indent-level 2)
   )
 
 (after! emmet-mode
