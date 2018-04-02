@@ -1,10 +1,10 @@
 ;;;  -*- lexical-binding: t; -*-
 
-(load! +paredit)
 (load! +org)
 (load! +web)
 (load! +git)
 (load! +edit)
+(load! +paredit)
 (load! +completion)
 
 ;; Smooth mouse scrolling
