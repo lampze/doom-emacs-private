@@ -11,9 +11,20 @@
 
 (delete-selection-mode)
 
+;; electric-pair-mode
 (when (fboundp 'electric-pair-mode)
   (add-hook 'doom-post-init-hook 'electric-pair-mode))
 (when (eval-when-compile (version< "24.4" emacs-version))
   (add-hook 'doom-post-init-hook 'electric-indent-mode))
 
 (setq electric-pair-open-newline-between-pairs nil)
+
+;; multiple-cursors
+(require 'multiple-cursors)
+
+(map!
+ "C-<" 'mc/mark-previous-like-this
+ "C->" 'mc/mark-next-like-this
+ "C-+" 'mc/mark-next-like-this
+ "C-c C-<" 'mc/mark-all-like-this
+ "C-c m r" 'set-rectangular-region-anchor)
