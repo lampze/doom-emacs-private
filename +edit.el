@@ -27,4 +27,5 @@
  "C->" 'mc/mark-next-like-this
  "C-+" 'mc/mark-next-like-this
  "C-c C-<" 'mc/mark-all-like-this
- "C-c m r" 'set-rectangular-region-anchor)
+ "C-c m r" 'set-rectangular-region-anchor
+ "C-S-<mouse-1>" 'mc/add-cursor-on-click)
