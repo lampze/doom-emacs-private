@@ -20,12 +20,12 @@
 (setq electric-pair-open-newline-between-pairs nil)
 
 ;; multiple-cursors
-(require 'multiple-cursors)
-
-(map!
- "C-<" 'mc/mark-previous-like-this
- "C->" 'mc/mark-next-like-this
- "C-+" 'mc/mark-next-like-this
- "C-c C-<" 'mc/mark-all-like-this
- "C-c m r" 'set-rectangular-region-anchor
- "C-S-<mouse-1>" 'mc/add-cursor-on-click)
+(def-package! multiple-cursors
+  :config
+  (map!
+   "C-<" 'mc/mark-previous-like-this
+   "C->" 'mc/mark-next-like-this
+   "C-+" 'mc/mark-next-like-this
+   "C-c C-<" 'mc/mark-all-like-this
+   "C-c m r" 'set-rectangular-region-anchor
+   "C-S-<mouse-1>" 'mc/add-cursor-on-click))

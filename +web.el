@@ -8,7 +8,7 @@
 
 (after! js2-mode
   (setq js-indent-level 2
-        tern-command '("tern" "--no-port-file")
+        tern-command '("tern" "--no-port-file" "--persistent")
         ))
 
 (map!
