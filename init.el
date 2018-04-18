@@ -29,7 +29,7 @@
        doom              ; what makes DOOM look the way it does
        doom-dashboard    ; a nifty splash screen for Emacs
        doom-modeline     ; a snazzy Atom-inspired mode-line
-       doom-quit         ; DOOM quit-message prompts when you quit Emacs
+      ;doom-quit         ; DOOM quit-message prompts when you quit Emacs
        hl-todo           ; highlight TODO/FIXME/NOTE tags
        nav-flash         ; blink the current line after jumping
        posframe          ; use child frames where possible (Emacs 26+ only)
@@ -76,7 +76,7 @@
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
        julia             ; a better, faster MATLAB
        latex             ; writing papers in Emacs has never been so fun
-       ledger            ; an accounting system in Emacs
+      ;ledger            ; an accounting system in Emacs
       ;lua               ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore
       ;ocaml             ; an objective camel
@@ -90,7 +90,7 @@
       ;perl              ; write code no one else can comprehend
       ;php               ; perl's insecure younger brother
        plantuml          ; diagrams for confusing people more
-       purescript        ; javascript, but functional
+      ;purescript        ; javascript, but functional
        python            ; beautiful is better than ugly
        rest              ; Emacs as a REST client
       ;ruby              ; 1.step do {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
@@ -126,6 +126,7 @@
       doom-unicode-font (font-spec :family "文泉驿等宽微米黑" :size 19)
       doom-big-font (font-spec :family "Hack" :size 24)
       frame-resize-pixelwise t
+      confirm-kill-emacs nil
       )
 
 (add-hook 'doom-post-init-hook '+workspace/load-session)
