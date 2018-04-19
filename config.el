@@ -21,3 +21,6 @@
       kept-new-versions 6
       kept-old-versions 2
       version-control t)
+
+(when (not (featurep! :ui doom-quit))
+  (setq confirm-kill-emacs nil))

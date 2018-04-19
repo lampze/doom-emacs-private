@@ -126,7 +126,6 @@
       doom-unicode-font (font-spec :family "文泉驿等宽微米黑" :size 19)
       doom-big-font (font-spec :family "Hack" :size 24)
       frame-resize-pixelwise t
-      confirm-kill-emacs nil
       )
 
 (add-hook 'doom-post-init-hook '+workspace/load-session)
