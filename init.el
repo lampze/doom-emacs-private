@@ -127,7 +127,3 @@
       doom-big-font (font-spec :family "Hack" :size 24)
       frame-resize-pixelwise t
       )
-
-(add-hook 'doom-post-init-hook '+workspace/load-session)
-
-(toggle-frame-maximized)

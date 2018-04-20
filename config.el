@@ -24,3 +24,8 @@
 
 (when (not (featurep! :ui doom-quit))
   (setq confirm-kill-emacs nil))
+
+(when (featurep! :feature workspaces)
+  (add-hook 'doom-post-init-hook '+workspace/load-session))
+
+(toggle-frame-maximized)
