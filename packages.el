@@ -1,4 +1,4 @@
-;;;  -*- lexical-binding: t; -*-
+;; -*- no-byte-compile: t; -*-
 
 (package! paredit)
 (package! multiple-cursors)
