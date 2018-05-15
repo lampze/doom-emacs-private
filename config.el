@@ -26,6 +26,6 @@
   (setq confirm-kill-emacs nil))
 
 (when (featurep! :feature workspaces)
-  (add-hook 'doom-post-init-hook '+workspace/load-session))
+  (add-hook! :append 'doom-init-hook '+workspace/load-session))
 
 (toggle-frame-maximized)
