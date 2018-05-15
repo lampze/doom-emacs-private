@@ -1,0 +1,6 @@
+# compiled files
+*.elc
+*.lib
+*.fas
+*.dat
+*.eld
