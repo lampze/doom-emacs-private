@@ -26,9 +26,6 @@
         )
 
        :ui
-       (popup            ; tame sudden yet inevitable temporary windows
-        +all             ; catch all popups that start with an asterix
-        +defaults)       ; default popup rules
        doom              ; what makes DOOM look the way it does
       ;doom-dashboard    ; a nifty splash screen for Emacs
        doom-modeline     ; a snazzy Atom-inspired mode-line
@@ -37,6 +34,9 @@
        hl-todo           ; highlight TODO/FIXME/NOTE tags
        nav-flash         ; blink the current line after jumping
        neotree           ; a project drawer, like NERDTree for vim
+       (popup            ; tame sudden yet inevitable temporary windows
+        +all             ; catch all popups that start with an asterix
+        +defaults)       ; default popup rules
       ;tabbar            ; FIXME an (incomplete) tab bar for Emacs
       ;unicode           ; extended unicode support for various languages
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
@@ -45,8 +45,8 @@
        :tools
        dired             ; making dired pretty [functional]
        editorconfig      ; let someone else argue about tabs vs spaces
-       ein               ; tame Jupyter notebooks with emacs
        electric-indent   ; smarter, keyword-based electric-indent
+       ein               ; tame Jupyter notebooks with emacs
        eshell            ; a consistent, cross-platform shell (WIP)
       ;gist              ; interacting with github gists
        imenu             ; an imenu sidebar and searchable code index
@@ -55,7 +55,7 @@
        magit             ;
       ;password-store    ; password manager for nerds
        pdf               ; pdf enhancements
-       prodigy           ; Managing external services
+       prodigy           ; FIXME managing external services & code builders
        rgb               ; creating color strings
        rotate-text       ; cycle region at point between text candidates
        term              ; terminals in Emacs
@@ -67,11 +67,11 @@
        cc                ; C/C++/Obj-C madness
       ;crystal           ; ruby at the speed of c
       ;clojure           ; java with a lisp
-       csharp            ; unity, .NET, and mono shenanigans
+      ;csharp            ; unity, .NET, and mono shenanigans
        data              ; config/data formats
       ;erlang            ; an elegant language for a more civilized age
       ;elixir            ; erlang done right
-       elm               ; care for a cup of TEA?
+      ;elm               ; care for a cup of TEA?
        emacs-lisp        ; drown in parentheses
        ess               ; emacs speaks statistics
       ;go                ; the hipster dialect
@@ -92,8 +92,7 @@
         +babel           ; running code in org
         +capture         ; org-capture in and outside of Emacs
         +export          ; Exporting org to whatever you want
-        +present         ; Emacs for presentations
-        +publish)        ; Emacs+Org as a static site generator
+        +present)        ; Emacs for presentations
       ;perl              ; write code no one else can comprehend
       ;php               ; perl's insecure younger brother
        plantuml          ; diagrams for confusing people more
@@ -105,7 +104,6 @@
       ;scala             ; java, but good
        sh                ; she sells (ba|z)sh shells on the C xor
       ;swift             ; who asked for emoji variables?
-      ;typescript        ; javascript, but better
        web               ; the tubes
 
        ;; Applications are complex and opinionated modules that transform Emacs
@@ -130,10 +128,3 @@
        ;; your own modules.
        (default +snippets)
        )
-
-(setq doom-font (font-spec :family "Hack" :size 19)
-      doom-variable-pitch-font (font-spec :family "Hack")
-      doom-unicode-font (font-spec :family "文泉驿等宽微米黑" :size 19)
-      doom-big-font (font-spec :family "Hack" :size 24)
-      frame-resize-pixelwise t
-      )
