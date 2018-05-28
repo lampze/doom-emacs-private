@@ -1,11 +1,11 @@
 ;;;  -*- lexical-binding: t; -*-
 
-(load! +org)
-(load! +web)
-(load! +git)
-(load! +edit)
-(load! +paredit)
-(load! +completion)
+(load! "+org")
+(load! "+web")
+(load! "+git")
+(load! "+edit")
+(load! "+paredit")
+(load! "+completion")
 
 
 (setq doom-font (font-spec :family "Hack" :size 19)
