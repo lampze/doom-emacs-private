@@ -3,6 +3,7 @@
 (load! "+org")
 (load! "+web")
 (load! "+git")
+(load! "+ivy")
 (load! "+edit")
 (load! "+paredit")
 (load! "+completion")
