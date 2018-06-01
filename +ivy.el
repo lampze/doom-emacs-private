@@ -2,5 +2,5 @@
 
 (map!
  (:after ivy
-   (:map ivy-mode-map
+   (:map ivy-minibuffer-map
      "C-d" 'ivy-switch-buffer-kill)))
