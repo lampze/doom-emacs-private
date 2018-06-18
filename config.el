@@ -5,6 +5,7 @@
 (load! "+git")
 (load! "+ivy")
 (load! "+edit")
+(load! "+scheme")
 (load! "+paredit")
 (load! "+completion")
 
