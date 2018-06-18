@@ -11,4 +11,9 @@
    (:map company-active-map
      "M-/" 'company-select-next
      "C-n" 'company-select-next
-     "C-p" 'company-select-previous)))
+     "C-p" 'company-select-previous
+     "C-h" 'company-show-doc-buffer
+     "TAB" 'company-complete-common-or-cycle
+     [tab] 'company-complete-common-or-cycle
+     "S-TAB" 'company-select-previous
+     [backtab] 'company-select-previous)))
