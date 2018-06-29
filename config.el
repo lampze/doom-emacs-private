@@ -1,6 +1,6 @@
 ;;;  -*- lexical-binding: t; -*-
 
-(load! "+org")
+(load! "+gtd")
 (load! "+web")
 (load! "+git")
 (load! "+ivy")

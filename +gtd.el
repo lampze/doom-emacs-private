@@ -2,7 +2,7 @@
 
 (map!
  "C-c c" (lambda! (org-capture))
- "C-c C" (lambda! (require 'org-capture) (call-interactively 'org-capture-goto-target)))
+ "C-c C-c" (lambda! (require 'org-capture) (call-interactively 'org-capture-goto-target)))
 
 (setq org-capture-templates nil
       org-default-notes-file "~/org/inbox.org")
