@@ -2,26 +2,18 @@
 
 (map!
  "C-c c" (lambda! (org-capture))
- "C-c C-c" (lambda! (require 'org-capture) (call-interactively 'org-capture-goto-target)))
+ "C-c C" (lambda! (require 'org-capture) (call-interactively 'org-capture-goto-target)))
 
-(setq org-capture-templates nil
-      org-default-notes-file "~/org/inbox.org")
-
-(add-to-list 'org-capture-templates
-             '("j" "Journal" entry
-               (file+datetree "~/org/journal.org")
-               "* %U - %^{heading}\n  %?"))
-
-(add-to-list 'org-capture-templates
-             '("i" "Inbox" entry (file "~/org/inbox.org")
-               "* %U - %^{heading} %^g\n %?\n"))
-
-(add-to-list 'org-capture-templates
-             '("n" "Notes" entry (file "~/org/notes/inbox.org")
-               "* %^{heading} %t %^g\n  %?\n"))
-
-(add-to-list 'org-capture-templates
-             '("t" "Todo" entry
-               (file+headline "~/org/task.org" "Tasks")
-               "* TODO %?\n%u\n" :clock-in t :clock-resume t))
-
+(setq org-capture-templates '(("i" "Inbox" entry
+                               (file+headline "~/.gtd/inbox.org" "Inbox")
+                               "* TODO %i%?")
+                              ("t" "Task" entry
+                               (file+headline "~/.gtd/inbox.org" "Tasks")
+                               "* TODO %i%?")
+                              ("s" "Study" entry
+                               (file+headline "~/.gtd/inbox.org" "Study")
+                               "* TODO %i%?"))
+      org-refile-targets '(("~/.gtd/gtd.org" :maxlevel . 3)
+                           ("~/.gtd/someday.org" :level . 1)
+                           ("~/.gtd/inbox.org" :level . 1)
+                           (nil :level . 1)))
