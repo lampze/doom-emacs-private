@@ -5,6 +5,7 @@
 (load! "+git")
 (load! "+ivy")
 (load! "+edit")
+(load! "+shell")
 (load! "+scheme")
 (load! "+paredit")
 (load! "+template")
@@ -36,6 +37,6 @@
   (setq confirm-kill-emacs nil))
 
 (when (featurep! :feature workspaces)
-  (add-hook! 'after-init-hook '+workspace/load-last-session))
+  (add-hook! :append 'doom-load-theme-hook '+workspace/load-last-session))
 
 (toggle-frame-maximized)
