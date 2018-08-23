@@ -4,4 +4,5 @@
   (set-pretty-symbols! 'scheme-mode
     :lambda "lambda"))
 
-(set-company-backend! 'scheme-mode '(company-scheme company-dabbrev-code))
+(set-company-backend! 'scheme-mode '(:separate company-dabbrev-code
+                                               company-scheme))

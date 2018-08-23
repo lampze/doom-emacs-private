@@ -7,6 +7,7 @@
 (load! "+edit")
 (load! "+scheme")
 (load! "+paredit")
+(load! "+template")
 (load! "+completion")
 
 
@@ -23,7 +24,6 @@
       mouse-wheel-follow-mouse t                    ; scroll window under mouse
       scroll-step 1)
 
-
 ;; Backups
 (setq make-backup-files t
       backup-by-copying t
@@ -36,6 +36,6 @@
   (setq confirm-kill-emacs nil))
 
 (when (featurep! :feature workspaces)
-  (add-hook! :append 'doom-post-init-hook '+workspace/load-session))
+  (add-hook! 'after-init-hook '+workspace/load-last-session))
 
 (toggle-frame-maximized)
