@@ -2,6 +2,7 @@
 
 (package! paredit)
 (package! multiple-cursors)
+(package! move-text)
 
 (when (featurep! :completion company)
   (package! company-scheme :recipe (:fetcher github :repo "lampze/company-scheme")))

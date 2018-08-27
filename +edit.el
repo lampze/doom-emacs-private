@@ -29,3 +29,10 @@
    "C-c C-<" 'mc/mark-all-like-this
    "C-c m r" 'set-rectangular-region-anchor
    "C-S-<mouse-1>" 'mc/add-cursor-on-click))
+
+;; move-text
+(def-package! move-text
+  :config
+  (map!
+   "M-p" 'move-text-up
+   "M-n" 'move-text-down))
