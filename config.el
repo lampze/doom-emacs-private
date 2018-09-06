@@ -16,6 +16,7 @@
       doom-variable-pitch-font (font-spec :family "Hack")
       doom-unicode-font (font-spec :family "文泉驿等宽微米黑" :size 19)
       doom-big-font (font-spec :family "Hack" :size 24)
+      markdown-command "pandoc"
       frame-resize-pixelwise t
       )
 
@@ -37,6 +38,6 @@
   (setq confirm-kill-emacs nil))
 
 (when (featurep! :feature workspaces)
-  (add-hook! :append 'doom-load-theme-hook '+workspace/load-last-session))
+  (add-hook! :append 'emacs-startup-hook '+workspace/load-last-session))
 
 (toggle-frame-maximized)
