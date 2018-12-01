@@ -40,4 +40,7 @@
 (when (featurep! :feature workspaces)
   (add-hook! :append 'emacs-startup-hook '+workspace/load-last-session))
 
+;; disable org-mode's auto wrap
+(remove-hook 'org-mode-hook 'auto-fill-mode)
+
 (toggle-frame-maximized)
