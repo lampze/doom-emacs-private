@@ -5,6 +5,7 @@
 (load! "+git")
 (load! "+ivy")
 (load! "+edit")
+(load! "+tool")
 (load! "+shell")
 (load! "+scheme")
 (load! "+paredit")
@@ -38,7 +39,7 @@
   (setq confirm-kill-emacs nil))
 
 (when (featurep! :feature workspaces)
-  (add-hook! :append 'emacs-startup-hook '+workspace/load-last-session))
+  (add-hook-after 'emacs-startup-hook 'doom|display-benchmark '+workspace/load-last-session))
 
 ;; disable org-mode's auto wrap
 (remove-hook 'org-mode-hook 'auto-fill-mode)
