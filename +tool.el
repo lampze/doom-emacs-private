@@ -5,7 +5,7 @@
         ((eq (car list) find) (cons atom list))
         (t (cons (car list) (append-after (cdr list) find atom)))))
 
-(defun add-hook-after (hook find function)
+(defun insert-hook (hook find function)
   (or (boundp hook) (set hook nil))
   (or (default-boundp hook) (set-default hook nil))
   (let ((hook-value (default-value hook)))
