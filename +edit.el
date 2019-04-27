@@ -36,3 +36,7 @@
   (map!
    "M-p" 'move-text-up
    "M-n" 'move-text-down))
+
+(map!
+ (:map evil-emacs-state-map
+   "M-;" 'comment-dwim))

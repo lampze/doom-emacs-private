@@ -18,6 +18,7 @@
       doom-unicode-font (font-spec :family "WenQuanYi Micro Hei" :size 19)
       doom-serif-font (font-spec :family "WenQuanYi Micro Hei" :size 19)
       doom-big-font (font-spec :family "Hack" :size 24)
+      c-basic-offset 2
       markdown-command "pandoc"
       frame-resize-pixelwise t
       )
@@ -39,8 +40,8 @@
 (when (not (featurep! :ui doom-quit))
   (setq confirm-kill-emacs nil))
 
-(when (featurep! :feature workspaces)
-  (insert-hook 'emacs-startup-hook 'doom|display-benchmark '+workspace/load-last-session))
+(when (featurep! :ui workspaces)
+  (insert-hook 'window-setup-hook 'doom|display-benchmark '+workspace/restore-last-session))
 
 ;; disable org-mode's auto wrap
 (remove-hook 'org-mode-hook 'auto-fill-mode)

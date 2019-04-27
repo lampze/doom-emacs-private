@@ -8,6 +8,7 @@
 
 (after! js2-mode
   (setq js-indent-level 2
+        tide-jump-to-definition-reuse-window nil
         ))
 
 (map!
