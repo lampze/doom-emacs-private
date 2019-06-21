@@ -6,6 +6,7 @@
 (load! "+ivy")
 (load! "+edit")
 (load! "+tool")
+(load! "+hack")
 (load! "+shell")
 (load! "+scheme")
 (load! "+paredit")
