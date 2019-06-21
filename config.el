@@ -21,6 +21,7 @@
       c-basic-offset 2
       markdown-command "pandoc"
       frame-resize-pixelwise t
+      evil-default-state 'emacs
       )
 
 ;; Smooth mouse scrolling
