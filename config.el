@@ -23,6 +23,11 @@
       markdown-command "pandoc"
       frame-resize-pixelwise t
       evil-default-state 'emacs
+      lsp-html-trace-server "verbose"
+      company-lsp-cache-candidates 'auto
+      company-lsp-async t
+      company-lsp-enable-snippet t
+      company-lsp-enable-recompletion t
       )
 
 ;; Smooth mouse scrolling
