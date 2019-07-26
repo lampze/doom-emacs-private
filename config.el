@@ -8,6 +8,7 @@
 (load! "+tool")
 (load! "+hack")
 (load! "+shell")
+(load! "+snails")
 (load! "+scheme")
 (load! "+paredit")
 (load! "+template")

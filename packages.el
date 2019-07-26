@@ -11,3 +11,6 @@
 (package! aweshell :recipe (:fetcher github
                                      :repo "manateelazycat/aweshell"
                                      :files ("*")))
+
+(package! snalis :recipe (:fetcher github
+                                   :repo "manateelazycat/snails"))
