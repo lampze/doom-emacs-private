@@ -48,9 +48,6 @@
 (when (not (featurep! :ui doom-quit))
   (setq confirm-kill-emacs nil))
 
-(when (featurep! :ui workspaces)
-  (insert-hook 'window-setup-hook 'doom|display-benchmark '+workspace/restore-last-session))
-
 ;; disable org-mode's auto wrap
 (remove-hook 'org-mode-hook 'auto-fill-mode)
 
