@@ -11,6 +11,10 @@
         tide-jump-to-definition-reuse-window nil
         ))
 
+(after! emmet-mode
+  (puthash "vue" "template+script+style:scope" emmet-tag-aliases-table)
+  (puthash "style:scope" "<style scope></style>" emmet-tag-snippets-table))
+
 (map!
  (:after web-mode
    (:map web-mode-map
