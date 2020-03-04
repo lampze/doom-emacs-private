@@ -12,10 +12,10 @@
 (delete-selection-mode)
 
 ;; electric-pair-mode
-(when (fboundp 'electric-pair-mode)
-  (add-hook 'doom-post-init-hook 'electric-pair-mode))
-(when (eval-when-compile (version< "24.4" emacs-version))
-  (add-hook 'doom-post-init-hook 'electric-indent-mode))
+;; (when (fboundp 'electric-pair-mode)
+;;   (add-hook 'doom-post-init-hook 'electric-pair-mode))
+;; (when (eval-when-compile (version< "24.4" emacs-version))
+;;   (add-hook 'doom-post-init-hook 'electric-indent-mode))
 
 (setq electric-pair-open-newline-between-pairs nil)
 
@@ -38,5 +38,10 @@
    "M-n" 'move-text-down))
 
 (map!
+ (:map override
+   "M-;")
  (:map evil-emacs-state-map
-   "M-;" 'comment-dwim))
+   (:after org
+     "C-<return>" 'org-insert-heading
+     "M-<return>" (lambda! (org-insert-heading)
+                           (org-metaright)))))

@@ -20,3 +20,7 @@
             (append-after hook-value find function)))
     ;; Set the actual variable
     (set-default hook hook-value)))
+
+(defun enable-format-on-save-now ()
+  (interactive)
+  (+format|enable-on-save))
