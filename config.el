@@ -61,4 +61,3 @@
 (+global-word-wrap-mode +1)
 
 (toggle-frame-maximized)
-;; (treemacs)
