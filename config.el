@@ -57,6 +57,8 @@
 
 ;; disable org-mode's auto wrap
 (remove-hook 'org-mode-hook 'auto-fill-mode)
+(remove-hook 'text-mode-hook 'auto-fill-mode)
+
 
 (+global-word-wrap-mode +1)
 
