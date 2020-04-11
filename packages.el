@@ -20,3 +20,10 @@
 (package! eaf :recipe (:host github
                              :repo "manateelazycat/emacs-application-framework"
                              :files ("*")))
+
+(package! nox :recipe (:host github
+                             :repo "manateelazycat/nox"))
+
+(package! fuz :recipe (:host github
+                             :repo "rustify-emacs/fuz.el"
+                             :files ("*")))

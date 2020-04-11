@@ -20,7 +20,7 @@
 (setq electric-pair-open-newline-between-pairs nil)
 
 ;; multiple-cursors
-(def-package! multiple-cursors
+(use-package! multiple-cursors
   :config
   (map!
    "C-<" 'mc/mark-previous-like-this
@@ -31,7 +31,7 @@
    "C-S-<mouse-1>" 'mc/add-cursor-on-click))
 
 ;; move-text
-(def-package! move-text
+(use-package! move-text
   :config
   (map!
    "M-p" 'move-text-up

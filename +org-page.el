@@ -1,6 +1,6 @@
 ;;; ~/.doom.d/+org-page.el -*- lexical-binding: t; -*-
 
-(def-package! org-page
+(use-package! org-page
   :config
   (setq op/repository-directory "~/codehome/lampze.github.io"
         op/repository-org-branch "source"

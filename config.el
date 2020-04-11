@@ -28,7 +28,7 @@
       evil-default-state 'emacs
       )
 
-(def-package! eaf
+(use-package! eaf
   :custom
   (eaf-find-alternate-file-in-dired t)
   :config
@@ -37,6 +37,8 @@
   (eaf-bind-key scroll_up "C-n" eaf-pdf-viewer-keybinding)
   (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding)
   (eaf-bind-key take_photo "p" eaf-camera-keybinding))
+
+(use-package! fuz)
 
 ;; Smooth mouse scrolling
 (setq mouse-wheel-scroll-amount '(2 ((shift) . 1))  ; scroll two lines at a time

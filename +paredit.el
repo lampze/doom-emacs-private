@@ -1,5 +1,5 @@
 ;;;  -*- lexical-binding: t; -*-
 
-(def-package! paredit
+(use-package! paredit
   :hook ((scheme-mode . enable-paredit-mode)
          (emacs-lisp-mode . enable-paredit-mode)))
