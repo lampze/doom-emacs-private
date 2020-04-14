@@ -4,6 +4,8 @@
 (package! multiple-cursors)
 (package! move-text)
 (package! org-page)
+(package! graphviz-dot-mode)
+(package! company-graphviz-dot)
 
 (when (featurep! :completion company)
   (package! company-scheme :recipe (:host github

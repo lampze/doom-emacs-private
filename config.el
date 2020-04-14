@@ -40,6 +40,14 @@
 
 (use-package! fuz)
 
+(use-package! graphviz-dot-mode
+  :config
+  (set-company-backend! 'graphviz-dot-mode '(company-graphviz-dot-backend))
+  (setq graphviz-dot-indent-width 4)
+  )
+
+(use-package! company-graphviz-dot)
+
 ;; Smooth mouse scrolling
 (setq mouse-wheel-scroll-amount '(2 ((shift) . 1))  ; scroll two lines at a time
       mouse-wheel-progressive-speed nil             ; don't accelerate scrolling
