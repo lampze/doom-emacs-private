@@ -26,6 +26,8 @@
       markdown-command "pandoc"
       frame-resize-pixelwise t
       evil-default-state 'emacs
+      nov-save-place-file "~/.emacs.d/.local/cache/nov-places"
+      eaf-config-location "~/.emacs.d/.local/cache/eaf/"
       )
 
 (use-package! eaf
