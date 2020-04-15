@@ -6,6 +6,7 @@
 (package! org-page)
 (package! graphviz-dot-mode)
 (package! company-graphviz-dot)
+(package! nov)
 
 (when (featurep! :completion company)
   (package! company-scheme :recipe (:host github
