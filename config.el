@@ -6,7 +6,7 @@
 (load! "+ivy")
 (load! "+edit")
 (load! "+tool")
-(load! "+hack")
+;(load! "+hack")
 (load! "+shell")
 (load! "+snails")
 (load! "+scheme")
@@ -16,11 +16,13 @@
 (load! "+completion")
 
 ;;; Hack
-(setq doom-font (font-spec :family "iosevka" :size 24)
+(setq doom-font (font-spec :family "hack" :size 24)
       doom-variable-pitch-font (font-spec :family "Hack")
       doom-unicode-font (font-spec :family "WenQuanYi Micro Hei" :size 24)
       doom-serif-font (font-spec :family "WenQuanYi Micro Hei" :size 24)
-      doom-big-font (font-spec :family "iosevka" :size 24)
+      doom-big-font (font-spec :family "hack" :size 24)
+      doom-theme 'doom-one
+      org-directory "~/.org"
       company-idle-delay 0.2
       c-basic-offset 2
       markdown-command "pandoc"
@@ -47,8 +49,6 @@
   (set-company-backend! 'graphviz-dot-mode '(company-graphviz-dot-backend))
   (setq graphviz-dot-indent-width 4)
   )
-
-(use-package! company-graphviz-dot)
 
 (use-package! nov
   :init

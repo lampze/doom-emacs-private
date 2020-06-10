@@ -5,7 +5,6 @@
 (package! move-text)
 (package! org-page)
 (package! graphviz-dot-mode)
-(package! company-graphviz-dot)
 (package! nov)
 
 (when (featurep! :completion company)
