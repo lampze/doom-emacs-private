@@ -75,7 +75,18 @@
       lsp-enable-snippet t
       lsp-auto-configure t
       lsp-file-watch-threshold 10000000
+
+      pyim-default-scheme 'rime
+      pyim-page-tooltip 'posframe
       )
+
+
+(use-package! liberime
+  :init
+  (setq liberime-shared-data-dir "~/.emacs.d/.local/rime/"
+        liberime-user-data-dir "~/.emacs.d/.local/rime/")
+  :config
+  (liberime-try-select-schema "wubi86"))
 
 
 (use-package! multiple-cursors
@@ -96,7 +107,7 @@
 
 (use-package! org-page
   :config
-  (setq op/repository-directory "~/codehome/lampze.github.io"
+  (setq op/repository-directory "~/Develop/sources/own/lampze.github.io/"
         op/repository-org-branch "source"
         op/repository-html-branch "master"
         op/theme-root-directory "/home/shirui/.emacs.d/.local/straight/repos/org-page/themes"
@@ -127,11 +138,20 @@
   :bind (("C-x C-b" . snails)
          ("C-x M-b" . snails-search-point))
   :config
-  (set-face-attribute 'snails-content-buffer-face nil :height 240)
+  ;; (set-face-attribute 'snails-content-buffer-face nil :height 240)
   )
 
 
-(use-package! fuz)
+(use-package fuz
+  :defer t
+  :init
+  (defun load-fuz ()
+    "Load fuz.el."
+    (require 'fuz)
+    (unless (require 'fuz-core nil t)
+      (fuz-build-and-load-dymod)))
+  :hook ((after-init . load-fuz))
+  )
 
 
 (use-package! graphviz-dot-mode
