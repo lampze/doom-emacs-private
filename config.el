@@ -77,8 +77,17 @@
       lsp-file-watch-threshold 10000000
 
       pyim-default-scheme 'rime
-      pyim-page-tooltip 'posframe
       )
+
+(setq-default c-basic-offset 2
+              tab-width 2
+              web-mode-markup-indent-offset 2
+              standard-indent 2
+              )
+
+
+(map! (:map ivy-minibuffer-map
+       "C-d" 'ivy-switch-buffer-kill))
 
 
 (use-package! liberime
