@@ -75,14 +75,14 @@
       lsp-enable-snippet t
       lsp-auto-configure t
       lsp-file-watch-threshold 10000000
-
-      pyim-default-scheme 'rime
       )
 
 (setq-default c-basic-offset 2
               tab-width 2
               web-mode-markup-indent-offset 2
               standard-indent 2
+
+              default-input-method "rime"
               )
 
 
@@ -90,12 +90,14 @@
        "C-d" 'ivy-switch-buffer-kill))
 
 
-(use-package! liberime
-  :init
-  (setq liberime-shared-data-dir "~/.emacs.d/.local/rime/"
-        liberime-user-data-dir "~/.emacs.d/.local/rime/")
+(use-package! rime
   :config
-  (liberime-try-select-schema "wubi86"))
+  (setq rime-user-data-dir "~/.local/share/fcitx5/rime"
+        rime-posframe-style 'vertical
+        rime-show-candidate 'posframe)
+  :custom
+  (default-input-method "rime")
+  (rime-emacs-module-header-root "/usr/include/emacs-28-vcs"))
 
 
 (use-package! multiple-cursors

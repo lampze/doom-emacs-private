@@ -55,7 +55,7 @@
 (package! org-page)
 (package! graphviz-dot-mode)
 (package! nov)
-(package! liberime)
+(package! rime)
 
 (when (featurep! :completion company)
   (package! company-scheme :recipe (:host github
