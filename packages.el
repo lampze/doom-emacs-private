@@ -56,6 +56,7 @@
 (package! graphviz-dot-mode)
 (package! nov)
 (package! rime)
+(package! posframe)
 
 (when (featurep! :completion company)
   (package! company-scheme :recipe (:host github
