@@ -61,7 +61,6 @@
       doom-big-font (font-spec :family "iosevka" :size 24)
       company-idle-delay 0.2
       frame-resize-pixelwise t
-      c-basic-offset 2
       markdown-command "pandoc"
       evil-default-state 'emacs
       nov-save-place-file "~/.emacs.d/.local/cache/nov-places"
@@ -85,9 +84,28 @@
               default-input-method "rime"
               )
 
+(after! org-re-reveal
+  (setq org-re-reveal-root "https://cdn.jsdelivr.net/npm/reveal.js"))
+
 
 (map! (:map ivy-minibuffer-map
-       "C-d" 'ivy-switch-buffer-kill))
+       "C-d" 'ivy-switch-buffer-kill)
+      (:map org-mode-map
+       "ESC <left>" 'org-metaleft))
+
+
+(use-package! org-roam-server
+  :ensure t
+  :config
+  (setq org-roam-server-host "127.0.0.1"
+        org-roam-server-port 9090
+        org-roam-server-export-inline-images t
+        org-roam-server-authenticate nil
+        org-roam-server-network-poll t
+        org-roam-server-network-arrows nil
+        org-roam-server-network-label-truncate t
+        org-roam-server-network-label-truncate-length 60
+        org-roam-server-network-label-wrap-length 20))
 
 
 (use-package! rime
