@@ -60,20 +60,22 @@
 
 (when (featurep! :completion company)
   (package! company-scheme :recipe (:host github
-                                          :repo "lampze/company-scheme")))
+                                    :repo "lampze/company-scheme")))
 
 (package! snalis :recipe (:host github
-                                :repo "manateelazycat/snails"
-                                :no-byte-compile t))
+                          :repo "manateelazycat/snails"
+                          :no-byte-compile t))
 
 (package! eaf :recipe (:host github
-                             :repo "manateelazycat/emacs-application-framework"
-                             :files ("*")))
+                       :repo "manateelazycat/emacs-application-framework"
+                       :files ("*")))
 
 (package! nox :recipe (:host github
-                             :repo "manateelazycat/nox"))
+                       :repo "manateelazycat/nox"))
 
 (package! fuz :recipe (:host github
-                             :repo "rustify-emacs/fuz.el"
-                             :files ("*")))
+                       :repo "rustify-emacs/fuz.el"
+                       :files ("*")))
 
+(package! english-teacher :recipe (:host github
+                                   :repo "loyalpartner/english-teacher.el"))

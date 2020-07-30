@@ -94,6 +94,16 @@
        "ESC <left>" 'org-metaleft))
 
 
+(use-package! english-teacher
+  :hook ((Info-mode
+          elfeed-show-mode
+          eww-mode
+          Man-mode
+          Woman-Mode) . english-teacher-follow-mode)
+  :config
+  (setq english-teacher-show-result-function 'english-teacher-eldoc-show-result-function))
+
+
 (use-package! rime
   :config
   (setq rime-user-data-dir "~/.local/share/fcitx5/rime"
