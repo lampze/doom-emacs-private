@@ -57,7 +57,6 @@
 (package! nov)
 (package! rime)
 (package! posframe)
-(package! org-roam-server)
 
 (when (featurep! :completion company)
   (package! company-scheme :recipe (:host github
