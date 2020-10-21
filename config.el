@@ -74,15 +74,15 @@
       lsp-enable-snippet t
       lsp-auto-configure t
       lsp-file-watch-threshold 10000000
+
+      c-basic-offset 2
+      tab-width 2
+      web-mode-markup-indent-offset 2
+      js-indent-level 2
+      standard-indent 2
+
+      default-input-method "rime"
       )
-
-(setq-default c-basic-offset 2
-              tab-width 2
-              web-mode-markup-indent-offset 2
-              standard-indent 2
-
-              default-input-method "rime"
-              )
 
 (after! org-re-reveal
   (setq org-re-reveal-root "https://cdn.jsdelivr.net/npm/reveal.js"))
