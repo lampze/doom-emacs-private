@@ -94,6 +94,17 @@
        "ESC <left>" 'org-metaleft))
 
 
+(use-package! org-latex-instant-preview
+  :defer t
+  :hook (org-mode . org-latex-instant-preview-mode)
+  :config
+  (setq org-latex-instant-preview-scale 2.5)
+  :init
+  (setq org-latex-instant-preview-tex2svg-bin
+        ;; location of tex2svg executable
+        "~/.emacs.d/.local/etc/node/node_modules/mathjax-node-cli/bin/tex2svg"))
+
+
 (use-package! english-teacher
   :hook ((Info-mode
           elfeed-show-mode
