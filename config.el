@@ -65,6 +65,7 @@
       evil-default-state 'emacs
       nov-save-place-file "~/.emacs.d/.local/cache/nov-places"
       eaf-config-location "~/.emacs.d/.local/cache/eaf/"
+      posframe-mouse-banish nil
 
       company-lsp-cache-candidates t
       company-lsp-async t
