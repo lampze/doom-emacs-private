@@ -76,14 +76,14 @@
       lsp-auto-configure t
       lsp-file-watch-threshold 10000000
 
-      c-basic-offset 2
-      tab-width 2
-      web-mode-markup-indent-offset 2
-      js-indent-level 2
-      standard-indent 2
-
       default-input-method "rime"
       )
+
+(setq-default c-basic-offset 2
+              tab-width 2
+              web-mode-markup-indent-offset 2
+              js-indent-level 2
+              standard-indent 2)
 
 (after! org-re-reveal
   (setq org-re-reveal-root "https://cdn.jsdelivr.net/npm/reveal.js"))
@@ -160,15 +160,15 @@
 (set-company-backend! 'scheme-mode '(:separate company-dabbrev-code
                                                company-scheme))
 
-(use-package! eaf
-  :custom
-  (eaf-find-alternate-file-in-dired t)
-  :config
-  (eaf-bind-key scroll_up "RET" eaf-pdf-viewer-keybinding)
-  (eaf-bind-key scroll_down_page "DEL" eaf-pdf-viewer-keybinding)
-  (eaf-bind-key scroll_up "C-n" eaf-pdf-viewer-keybinding)
-  (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding)
-  (eaf-bind-key take_photo "p" eaf-camera-keybinding))
+;; (use-package! eaf
+;;   :custom
+;;   (eaf-find-alternate-file-in-dired t)
+;;   :config
+;;   (eaf-bind-key scroll_up "RET" eaf-pdf-viewer-keybinding)
+;;   (eaf-bind-key scroll_down_page "DEL" eaf-pdf-viewer-keybinding)
+;;   (eaf-bind-key scroll_up "C-n" eaf-pdf-viewer-keybinding)
+;;   (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding)
+;;   (eaf-bind-key take_photo "p" eaf-camera-keybinding))
 
 
 (use-package! snails

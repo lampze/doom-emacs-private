@@ -66,9 +66,9 @@
                           :repo "manateelazycat/snails"
                           :no-byte-compile t))
 
-(package! eaf :recipe (:host github
-                       :repo "manateelazycat/emacs-application-framework"
-                       :files ("*")))
+;; (package! eaf :recipe (:host github
+;;                        :repo "manateelazycat/emacs-application-framework"
+;;                        :files ("*")))
 
 (package! nox :recipe (:host github
                        :repo "manateelazycat/nox"))
