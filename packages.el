@@ -80,5 +80,5 @@
 (package! english-teacher :recipe (:host github
                                    :repo "loyalpartner/english-teacher.el"))
 
-(package! org-latex-instant-preview :recipe (:host github
-                                             :repo "yangsheng6810/org-latex-instant-preview"))
+(package! org-latex-impatient :recipe (:host github
+                                             :repo "yangsheng6810/org-latex-impatient"))

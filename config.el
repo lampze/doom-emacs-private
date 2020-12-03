@@ -95,13 +95,13 @@
        "ESC <left>" 'org-metaleft))
 
 
-(use-package! org-latex-instant-preview
+(use-package! org-latex-impatient
   :defer t
-  :hook (org-mode . org-latex-instant-preview-mode)
+  :hook (org-mode . org-latex-impatient-mode)
   :config
-  (setq org-latex-instant-preview-scale 2.5)
+  (setq org-latex-impatient-scale 2.5)
   :init
-  (setq org-latex-instant-preview-tex2svg-bin
+  (setq org-latex-impatient-tex2svg-bin
         ;; location of tex2svg executable
         "~/.emacs.d/.local/etc/node/node_modules/mathjax-node-cli/bin/tex2svg"))
 
