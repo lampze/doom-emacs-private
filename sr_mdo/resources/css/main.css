@@ -157,11 +157,11 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
 }
-pre.src {
+pre.prettyprint {
   padding-top: 1.2em;
   position: relative;
 }
-pre.src:before {
+pre.prettyprint:before {
   display: none;
   position: absolute;
   background-color: white;
@@ -170,31 +170,11 @@ pre.src:before {
   padding: 3px;
   border: 1px solid black;
 }
-pre.src:hover:before {
+pre.prettyprint:hover:before {
   display: inline;
-  background-color: #000000;
+  background-color: #042029;
   border: 1px solid #e1e1e8;
-}
-pre.src-sh:before {
-  content: "sh";
-}
-pre.src-bash:before {
-  content: "sh";
-}
-pre.src-emacs-lisp:before {
-  content: "Emacs Lisp";
-}
-pre.src-C:before {
-  content: "C/C++";
-}
-pre.src-matlab:before {
-  content: "matlab";
-}
-pre.src-maxima:before {
-  content: "maxima";
-}
-pre.src-lisp:before {
-  content: "common lisp";
+  content: attr(data-lang);
 }
 blockquote {
   padding: 0 0 0 20px;
