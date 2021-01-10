@@ -148,10 +148,8 @@ pre {
   display: block;
   margin: 0 0 14px;
   padding: 15px;
-  border: 1px solid #e1e1e8;
   border-radius: 3px 3px 3px 3px;
   line-height: 28px;
-  background-color: #f5f5f5;
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
@@ -172,8 +170,6 @@ pre.prettyprint:before {
 }
 pre.prettyprint:hover:before {
   display: inline;
-  background-color: #042029;
-  border: 1px solid #e1e1e8;
   content: attr(data-lang);
 }
 blockquote {
@@ -360,6 +356,7 @@ table td.right {
   position: fixed;
   right: 0em;
   top: 0em;
+  background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid #e1e1e8;
   -webkit-box-shadow: 0 0 1em #777777;
   -moz-box-shadow: 0 0 1em #777777;
