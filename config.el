@@ -21,7 +21,13 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
+(setq doom-font (font-spec :family "iosevka" :size 24)
+      doom-variable-pitch-font (font-spec :family "iosevka")
+      doom-unicode-font (font-spec :family "WenQuanYi Micro Hei" :size 24)
+      doom-serif-font (font-spec :family "WenQuanYi Micro Hei" :size 24)
+      doom-big-font (font-spec :family "iosevka" :size 24))
 
+(add-to-list 'doom-unicode-extra-fonts "WenQuanYi Micro Hei" t)
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -54,12 +60,7 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(setq doom-font (font-spec :family "iosevka" :size 24)
-      doom-variable-pitch-font (font-spec :family "iosevka")
-      doom-unicode-font (font-spec :family "WenQuanYi Micro Hei" :size 24)
-      doom-serif-font (font-spec :family "WenQuanYi Micro Hei" :size 24)
-      doom-big-font (font-spec :family "iosevka" :size 24)
-      company-idle-delay 0.2
+(setq company-idle-delay 0.2
       frame-resize-pixelwise t
       markdown-command "pandoc"
       evil-default-state 'emacs
