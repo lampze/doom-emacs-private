@@ -245,3 +245,12 @@ p.verse {
     float: right;
   }
 }
+
+.fold::after {
+  content: "...";
+  color: #ccc;
+}
+
+.hide {
+  display: none;
+}
