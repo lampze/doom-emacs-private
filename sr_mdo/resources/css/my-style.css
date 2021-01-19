@@ -5,6 +5,7 @@ p {
 ol,
 ul {
   margin: 0 auto;
+  padding: 0;
 }
 
 dl {
@@ -16,7 +17,7 @@ body {
   margin: 2% auto;
   font-size: 14px;
   line-height: 1.4em;
-  font-family: Georgia, serif;
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
   color: #444;
 }
 

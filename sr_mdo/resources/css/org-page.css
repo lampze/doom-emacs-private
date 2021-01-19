@@ -277,6 +277,16 @@ sup a:after {
 #table-of-contents h2::before {
   content: "";
 }
+#table-of-contents ul {
+  margin-left: 14pt;
+  padding: 0;
+}
+
+#table-of-contents li {
+  padding: 0;
+  margin: 1px;
+  list-style: none;
+}
 
 /* footer */
 .footer {
