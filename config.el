@@ -97,9 +97,12 @@
 
 
 (use-package! company-tabnine
-  :ensure t
+  :after company
+  :when (featurep! :completion company)
   :config
-  (setq +lsp-company-backends '(company-tabnine company-capf)))
+  (setq +lsp-company-backends '(company-tabnine company-capf))
+  (set-company-backend! 'prog-mode
+    '(company-tabnine company-capf) 'company-yasnippet))
 
 
 (use-package! org-latex-impatient
