@@ -96,6 +96,12 @@
        "ESC <left>" 'org-metaleft))
 
 
+(use-package! company-tabnine
+  :ensure t
+  :config
+  (setq +lsp-company-backends '(company-tabnine company-capf)))
+
+
 (use-package! org-latex-impatient
   :defer t
   :hook (org-mode . org-latex-impatient-mode)

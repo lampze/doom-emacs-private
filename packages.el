@@ -57,6 +57,7 @@
 (package! nov)
 (package! rime)
 (package! posframe)
+(package! company-tabnine)
 
 (when (featurep! :completion company)
   (package! company-scheme :recipe (:host github
