@@ -64,8 +64,7 @@
                                     :repo "lampze/company-scheme")))
 
 (package! snalis :recipe (:host github
-                          :repo "manateelazycat/snails"
-                          :no-byte-compile t))
+                          :repo "manateelazycat/snails"))
 
 ;; (package! eaf :recipe (:host github
 ;;                        :repo "manateelazycat/emacs-application-framework"
