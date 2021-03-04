@@ -17,7 +17,7 @@ body {
   margin: 2% auto;
   font-size: 14px;
   line-height: 1.4em;
-  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  font-family: Menlo, Monaco, monospace;
   color: #444;
 }
 

@@ -120,7 +120,6 @@ sup a:after {
 /* head */
 .masthead {
   color: #888;
-  border-bottom: 1px solid #e2e3e4;
 }
 .masthead a {
   color: #333;
@@ -140,10 +139,17 @@ sup a:after {
   content: "\00B7 \00a0";
   color: #ccc;
 }
-/*site-nav*/
-.site-nav {
-  border-top: 1px solid #e8e8e8;
+
+.masthead:after {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  content: "-----------------------------------------------------------------------------------";
+  margin: 10px 0;
+  color: #ccc;
 }
+
+/*site-nav*/
 .site-nav .menu-icon {
   display: none;
 }
@@ -194,7 +200,6 @@ sup a:after {
 /* post */
 .post {
   position: relative;
-  border-bottom: 1px solid #e2e3e4;
 }
 .post img {
   max-width: 100%;
@@ -215,6 +220,13 @@ sup a:after {
   counter-increment: o-list;
   color: #ccc;
 }
+.post:after {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  content: "-----------------------------------------------------------------------------------";
+  color: #ccc;
+}
 
 /* meta info */
 .post-info {
@@ -224,9 +236,6 @@ sup a:after {
 }
 .post-info + .post-info:before {
   content: "\2223 \00a0";
-}
-.post-meta {
-  border-bottom: 1px solid #e2e3e4;
 }
 .center {
   margin-left: auto;
@@ -290,9 +299,9 @@ sup a:after {
 
 /* footer */
 .footer {
-  margin: 80px 0 0;
+  margin: 4em 0 2em;
   text-align: center;
-  font-size: 15px;
+  font-size: 10px;
   color: #999;
 }
 .footer > p {
