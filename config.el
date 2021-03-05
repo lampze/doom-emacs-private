@@ -67,6 +67,7 @@
       nov-save-place-file "~/.emacs.d/.local/cache/nov-places"
       eaf-config-location "~/.emacs.d/.local/cache/eaf/"
       posframe-mouse-banish nil
+      rmh-elfeed-org-files (list "~/.org/elfeed.org")
 
       company-lsp-cache-candidates t
       company-lsp-async t
@@ -86,8 +87,13 @@
               js-indent-level 2
               standard-indent 2)
 
+
 (after! org-re-reveal
   (setq org-re-reveal-root "https://cdn.jsdelivr.net/npm/reveal.js"))
+
+
+(after! elfeed
+  (setq elfeed-search-filter "@2-months-ago -arxiv -v2ex -game"))
 
 
 (map! (:map ivy-minibuffer-map
