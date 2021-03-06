@@ -32,7 +32,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-homage-white)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -67,7 +67,7 @@
       nov-save-place-file "~/.emacs.d/.local/cache/nov-places"
       eaf-config-location "~/.emacs.d/.local/cache/eaf/"
       posframe-mouse-banish nil
-      rmh-elfeed-org-files (list "~/.org/elfeed.org")
+      rmh-elfeed-org-files (list "~/.doom.d/elfeed.org")
 
       company-lsp-cache-candidates t
       company-lsp-async t
@@ -93,7 +93,7 @@
 
 
 (after! elfeed
-  (setq elfeed-search-filter "@2-months-ago -arxiv -v2ex -game"))
+  (setq elfeed-search-filter "@2-months-ago -arxiv -v2ex -game -hide"))
 
 
 (map! (:map ivy-minibuffer-map

@@ -1,0 +1,107 @@
+#+TITLE: Elfeed
+
+* RSS :elfeed:
+** entry-title: \(linux\|linus\|ubuntu\|kde\|gnome\) :linux:
+*** [[https://jia.je/feed.xml][杰哥的{运维,编程,调板子}小笔记]]
+** Content Platform
+*** [[https://www.zhihu.com/rss][知乎精选]] :zhihu:
+*** [[http://feeds.feedburner.com/zhihu-daily][知乎日报]] :zhihu:
+*** [[https://hellogithub.com/rss][HelloGitHub]]
+*** [[https://www.v2ex.com/index.xml][v2ex]] :v2ex:
+*** [[https://sspai.com/feed][少数派]] :sspai:
+** Game :game:
+*** [[https://www.gcores.com/rss][机核]]
+*** [[https://www.yystv.cn/rss/feed][游研社]]
+** Academic :science:
+**** [[https://iseex.github.io/feed][青柠学术]]
+**** Arxiv :arxiv:
+***** [[http://export.arxiv.org/rss/cs.CV][机器视觉]] :cv:
+***** [[http://export.arxiv.org/rss/cs.DS][数据结构与算法]] :ds:
+***** [[http://export.arxiv.org/rss/cs.AI][人工智能]] :ai:
+***** [[http://export.arxiv.org/rss/cs.PL][编程语言]] :pl:
+***** [[http://export.arxiv.org/rss/cs.LG][机器学习]] :lg:
+** Software Development :dev:
+*** Emacs :emacs:mustread:
+**** http://www.terminally-incoherent.com/blog/feed
+**** http://nullprogram.com/feed
+**** entry-title: \(emacs\|org-mode\)
+**** [[http://blog.binchen.org/rss.xml][Chen's blog]]
+**** [[https://zilongshanren.com/index.xml][子龙山人]]
+**** [[https://www.zmonster.me/atom.xml][ZMonster's Blog]]
+**** [[https://chriszheng.science/][Chris An Emacser]]
+**** [[https://macplay.github.io/rss.xml][MacPlay]]
+**** [[https://manateelazycat.github.io/feed.xml][manateelazycat]]
+**** [[http://blog.lujun9972.win/rss.xml][暗无天日]]
+**** [[https://brantou.github.io/atom.xml][Brantou的日常]]
+**** [[https://archive.casouri.cat/note/rss.xml][casouri]]
+**** [[https://eason0210.github.io/feed.xml][eason0210]]
+**** [[https://sunyour.org/index.xml][凡·记]]
+**** [[http://doglooksgood.github.io/rss][狗好看の世界]]
+**** [[http://blog.lujun9972.win/emacs-document/rss.xml][EMACS-DOCUMENT]]
+*** Web Development :web:
+*** Comprehensive :mustread:
+**** [[http://www.ruanyifeng.com/blog/atom.xml][阮一峰]]
+**** [[https://iovxw.net/rss.xml][iovxw]]
+**** [[https://rsshub.app/blogs/wangyin][王垠]]
+**** [[https://bloghub.fun/feeds][BlogHub]] :bloghub:
+*** Lisp :lisp:
+**** [[https://www.zenlife.tk/feed.atom][zenlife]]
+**** [[http://matt.might.net/articles/feed.rss][Matt Might's blog]]
+**** [[https://saintwinkle.com/rss.xml][星雨之夜]]
+*** Linux :linux:
+**** [[http://tinylab.org/rss.xml][泰晓科技]]
+**** [[https://www.hi-linux.com/atom.xml][奇妙的 Linux 世界]]
+**** [[https://trofi.github.io/feed/rss.xml][trofi]]
+**** [[http://abcdxyzk.github.io/atom.xml][kk Blog —— 通用基础]]
+**** [[https://farseerfc.me/zhs/feeds/atom.xml][Farseerfc的小窝]]
+**** [[https://blog.bbskali.cn/feed][Kali's Blog]]
+**** [[https://jaminzhang.github.io/rss/][Jamin Zhang]]
+*** Back-end :bend:
+**** [[https://liujiacai.net/atom.xml][Keep Coding]]
+**** [[https://best33.com/feed][做最好的三三]]
+**** [[https://www.nenew.net/feed][奶牛博客]]
+**** [[https://www.librehat.com/feed/][Librehat的部落格]]
+**** [[https://lotabout.me/atom.xml][三点水]]
+**** [[https://microcai.org/feed.xml][菜菜博士]]
+**** [[https://nyan.im/feed][Frank's Weblog]]
+**** [[https://honmaple.me/atom.xml][honmaple]]
+**** [[https://paul.pub/feed][保罗的酒吧]]
+**** [[https://cjting.me/index.xml][CJ Ting's Blog]]
+**** [[https://draveness.me/feed.xml][面向信仰编程]]
+**** [[https://tstrs.me/atom.xml][SaltyLeo's Blog]]
+**** [[https://wsgzao.github.io/atom.xml][wsgzao]]
+**** [[https://colobu.com/atom.xml][鸟窝]]
+**** [[https://www.ihewro.com/feed/][友人C]]
+*** Front-end :fend:
+**** [[https://coldstone.fun/atom.xml][冷石]]
+**** [[http://feed.cnblogs.com/blog/u/177636/rss/][ChokCoco]]
+**** [[https://iachieveall.com/rss][贪婪的君子]]
+**** [[https://blog.mutoo.im/atom.xml][木匣子]]
+*** Hardward :hardward:
+*** Algorithm :algorithm:
+**** [[https://taodaling.github.io/feed][Daltao]]
+**** [[https://ksqsf.moe/atom.xml?t=1615000589524][Cicada]]
+**** [[https://logicgrimoire.wordpress.com/feed/][the logic grimoire]]
+**** [[http://feeds.feedburner.com/zhihua-xblog][小赖子的英国生活和资讯]]
+**** [[https://111hunter.github.io/index.xml][浮槎的博客]]
+*** Artificial Intelligence :ai:
+**** [[https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Fwww.ruanx.net%2Frss%2F][Pion1eer]]
+**** [[https://suool.net/atom.xml][SuooL's Blog]]
+**** [[http://blog.qinjian.me/atom.xml][K.I.S.S]]
+*** Cyber Security :secure:
+**** [[https://blog.werner.wiki/feed/][若水斋]]
+**** [[http://www.wupco.cn/?feed=rss2][Wupco's Blog]]
+** Math :math:
+*** [[http://lanqi.org/feed/][Math173]]
+** Other :other:
+*** [[https://www.changhai.org/feed.xml][卢昌海个人主页]] :changhai:
+* I can't get the rss
+https://wowothink.com/
+http://fuzihao.org/blog/
+http://arthurchiao.art/
+https://www.chenng.cn/
+https://tautcony.xyz/
+http://ishero.net/
+https://geekinney.com/
+https://blog.linyxus.xyz/
+http://kakuguo.ink/
