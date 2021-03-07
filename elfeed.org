@@ -50,12 +50,12 @@
 **** [[https://saintwinkle.com/rss.xml][星雨之夜]]
 *** Linux :linux:
 **** [[http://tinylab.org/rss.xml][泰晓科技]]
-**** [[https://www.hi-linux.com/atom.xml][奇妙的 Linux 世界]]
 **** [[https://trofi.github.io/feed/rss.xml][trofi]]
 **** [[http://abcdxyzk.github.io/atom.xml][kk Blog —— 通用基础]]
 **** [[https://farseerfc.me/zhs/feeds/atom.xml][Farseerfc的小窝]]
 **** [[https://blog.bbskali.cn/feed][Kali's Blog]]
 **** [[https://jaminzhang.github.io/rss/][Jamin Zhang]]
+**** [[https://www.myfreax.com/rss/][myfreax]]
 *** Back-end :bend:
 **** [[https://liujiacai.net/atom.xml][Keep Coding]]
 **** [[https://best33.com/feed][做最好的三三]]
@@ -91,6 +91,8 @@
 *** Cyber Security :secure:
 **** [[https://blog.werner.wiki/feed/][若水斋]]
 **** [[http://www.wupco.cn/?feed=rss2][Wupco's Blog]]
+*** Latex :latex:
+**** [[https://jdhao.github.io/index.xml][jdhao's blog]]
 ** Math :math:
 *** [[http://lanqi.org/feed/][Math173]]
 ** Other :other:
