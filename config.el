@@ -158,24 +158,12 @@
                 company-tooltip-align-annotations t))
 
 
-(use-package! org-page
-  :config
-  (setq op/repository-directory "~/Develop/sources/own/lampze.github.io/"
-        op/repository-org-branch "source"
-        op/repository-html-branch "master"
-        op/theme-root-directory "~/.doom.d/"
-        op/theme 'sr_mdo
-        op/load-directory "/home/shirui/.emacs.d/.local/straight/repos/org-page/"
-        op/personal-github-link "https://github.com/lampze/"
-        op/site-domain "https://lampze.github.io/"))
-
-
 (when (featurep! :ui pretty-code)
   (set-pretty-symbols! 'scheme-mode
     :lambda "lambda"))
 
 (set-company-backend! 'scheme-mode '(:separate company-dabbrev-code
-                                               company-scheme))
+                                     company-scheme))
 
 ;; (use-package! eaf
 ;;   :custom
@@ -218,6 +206,58 @@
 (use-package! nov
   :init
   (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
+
+
+;; org-static-blog config start
+(setq org-static-blog-publish-title "lampze's Blog"
+      org-static-blog-publish-url "https://lampze.github.io/"
+      org-static-blog-publish-directory "~/Develop/sources/own/lampze.github.io/"
+      org-static-blog-posts-directory "~/Develop/sources/own/lampze.github.io/posts/"
+      org-static-blog-drafts-directory "~/Develop/sources/own/lampze.github.io/drafts/"
+      org-export-with-toc nil
+      org-export-with-section-numbers nil
+      org-static-blog-index-length 6
+      org-static-blog-enable-tags t
+      org-static-blog-use-preview t
+      org-static-blog-preview-link-p t)
+
+(setq org-static-blog-page-header
+      "<meta  name=\"author\" content=\"lampze\" />
+      <link href= \"static/style.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <link href= \"static/org.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <meta http-equiv=\"content-type\" content=\"application/xhtml+xml; charset=UTF-8\" />
+      <meta name=\"viewport\" content=\"initial-scale=1,width=device-width,minimum-scale=1\">")
+
+(setq org-static-blog-page-preamble
+      "<div class=\"header\">
+        <a href=\"https://lampze.github.io\">lampze's Blog</a>
+      </div>")
+
+(setq org-static-blog-page-postamble
+      "<center>
+         <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\"></a><br />
+         <span xmlns:dct=\"https://purl.org/dc/terms/\"
+               href=\"https://purl.org/dc/dcmitype/Text\"
+               property=\"dct:title\"
+               rel=\"dct:type\">
+           https://lampze.github.io
+         </span>
+         by
+         <a xmlns:cc=\"https://creativecommons.org/ns#\"
+              href=\"https://lampze.github.io\"
+              property=\"cc:attributionName\"
+              rel=\"cc:attributionURL\">
+           lampze
+         </a>
+         is licensed under a
+         <a rel=\"license\"
+            href=\"https://creativecommons.org/licenses/by-sa/3.0/\">
+           Creative Commons Attribution-ShareAlike 3.0 Unported License
+         </a>.
+       </center>
+       <script src=\"https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.slim.js\"></script>
+       <script type=\"text/javascript\" src=\"static/main.js\"></script>")
+;; org-static-blog config end
 
 
 ;; Smooth mouse scrolling

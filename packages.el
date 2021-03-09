@@ -52,12 +52,12 @@
 (package! paredit)
 (package! multiple-cursors)
 (package! move-text)
-(package! org-page)
 (package! graphviz-dot-mode)
 (package! nov)
 (package! rime)
 (package! posframe)
 (package! company-tabnine)
+(package! org-static-blog)
 
 (when (featurep! :completion company)
   (package! company-scheme :recipe (:host github
