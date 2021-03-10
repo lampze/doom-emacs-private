@@ -38,6 +38,7 @@
 **** [[https://sunyour.org/index.xml][凡·记]]
 **** [[http://doglooksgood.github.io/rss][狗好看の世界]]
 **** [[http://blog.lujun9972.win/emacs-document/rss.xml][EMACS-DOCUMENT]]
+**** [[https://oremacs.com/atom.xml][oremacs]]
 *** Web Development :web:
 *** Comprehensive :mustread:
 **** [[http://www.ruanyifeng.com/blog/atom.xml][阮一峰]]
@@ -72,11 +73,13 @@
 **** [[https://wsgzao.github.io/atom.xml][wsgzao]]
 **** [[https://colobu.com/atom.xml][鸟窝]]
 **** [[https://www.ihewro.com/feed/][友人C]]
+**** [[https://matklad.github.io/feed.xml][matklad]]
 *** Front-end :fend:
 **** [[https://coldstone.fun/atom.xml][冷石]]
 **** [[http://feed.cnblogs.com/blog/u/177636/rss/][ChokCoco]]
 **** [[https://iachieveall.com/rss][贪婪的君子]]
 **** [[https://blog.mutoo.im/atom.xml][木匣子]]
+**** [[https://www.chenng.cn/rss][chenng]]
 *** Hardward :hardward:
 *** Algorithm :algorithm:
 **** [[https://taodaling.github.io/feed][Daltao]]
@@ -84,10 +87,14 @@
 **** [[https://logicgrimoire.wordpress.com/feed/][the logic grimoire]]
 **** [[http://feeds.feedburner.com/zhihua-xblog][小赖子的英国生活和资讯]]
 **** [[https://111hunter.github.io/index.xml][浮槎的博客]]
+**** [[http://blog.miskcoo.com/feed][Miskcoo]]
+**** [[https://ridiqulous.com/feed/][RidiQulous]]
+**** [[http://arthurchiao.art/feed.xml][ArthurChiao]]
 *** Artificial Intelligence :ai:
 **** [[https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Fwww.ruanx.net%2Frss%2F][Pion1eer]]
 **** [[https://suool.net/atom.xml][SuooL's Blog]]
 **** [[http://blog.qinjian.me/atom.xml][K.I.S.S]]
+**** [[http://kakuguo.ink/feed.xml][kakuguo]]
 *** Cyber Security :secure:
 **** [[https://blog.werner.wiki/feed/][若水斋]]
 **** [[http://www.wupco.cn/?feed=rss2][Wupco's Blog]]
@@ -100,10 +107,7 @@
 * I can't get the rss
 https://wowothink.com/
 http://fuzihao.org/blog/
-http://arthurchiao.art/
-https://www.chenng.cn/
 https://tautcony.xyz/
 http://ishero.net/
 https://geekinney.com/
 https://blog.linyxus.xyz/
-http://kakuguo.ink/
