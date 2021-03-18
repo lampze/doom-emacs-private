@@ -8,7 +8,7 @@
 *** [[http://feeds.feedburner.com/zhihu-daily][知乎日报]] :zhihu:
 *** [[https://hellogithub.com/rss][HelloGitHub]]
 *** [[https://www.v2ex.com/index.xml][v2ex]] :v2ex:
-*** [[https://sspai.com/feed][少数派]] :sspai:
+*** [[https://sspai.typlog.io/episodes/feed.xml][少数派]] :sspai:
 ** Game :game:
 *** [[https://www.gcores.com/rss][机核]]
 *** [[https://www.yystv.cn/rss/feed][游研社]]
@@ -45,6 +45,7 @@
 **** [[https://iovxw.net/rss.xml][iovxw]]
 **** [[https://rsshub.app/blogs/wangyin][王垠]]
 **** [[https://bloghub.fun/feeds][BlogHub]] :bloghub:
+**** [[https://interconnected.blog/rss/][Interconnected]]
 *** Lisp :lisp:
 **** [[https://www.zenlife.tk/feed.atom][zenlife]]
 **** [[http://matt.might.net/articles/feed.rss][Matt Might's blog]]
@@ -57,6 +58,7 @@
 **** [[https://blog.bbskali.cn/feed][Kali's Blog]]
 **** [[https://jaminzhang.github.io/rss/][Jamin Zhang]]
 **** [[https://www.myfreax.com/rss/][myfreax]]
+**** [[https://nan01ab.github.io/rss][Columba M71]]
 *** Back-end :bend:
 **** [[https://liujiacai.net/atom.xml][Keep Coding]]
 **** [[https://best33.com/feed][做最好的三三]]
@@ -80,6 +82,7 @@
 **** [[https://iachieveall.com/rss][贪婪的君子]]
 **** [[https://blog.mutoo.im/atom.xml][木匣子]]
 **** [[https://www.chenng.cn/rss][chenng]]
+**** [[https://lutaonan.com/rss.xml][Randy]]
 *** Hardward :hardward:
 *** Algorithm :algorithm:
 **** [[https://taodaling.github.io/feed][Daltao]]
@@ -90,6 +93,7 @@
 **** [[http://blog.miskcoo.com/feed][Miskcoo]]
 **** [[https://ridiqulous.com/feed/][RidiQulous]]
 **** [[http://arthurchiao.art/feed.xml][ArthurChiao]]
+**** [[https://edward852.github.io/index.xml][时聆心语]]
 *** Artificial Intelligence :ai:
 **** [[https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Fwww.ruanx.net%2Frss%2F][Pion1eer]]
 **** [[https://suool.net/atom.xml][SuooL's Blog]]

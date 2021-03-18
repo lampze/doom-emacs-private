@@ -21,13 +21,13 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
-(setq doom-font (font-spec :family "iosevka" :size 24)
+(setq doom-font (font-spec :family "iosevka" :size 26)
       doom-variable-pitch-font (font-spec :family "iosevka")
-      doom-unicode-font (font-spec :family "WenQuanYi Micro Hei" :size 24)
-      doom-serif-font (font-spec :family "WenQuanYi Micro Hei" :size 24)
-      doom-big-font (font-spec :family "iosevka" :size 24))
+      doom-unicode-font (font-spec :family "WenQuanYi Micro Hei Mono" :size 26)
+      doom-serif-font (font-spec :family "WenQuanYi Micro Hei Mono" :size 26)
+      doom-big-font (font-spec :family "iosevka" :size 26))
 
-(add-to-list 'doom-unicode-extra-fonts "WenQuanYi Micro Hei" t)
+(add-to-list 'doom-unicode-extra-fonts "WenQuanYi Micro Hei Mono" t)
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -123,11 +123,11 @@
 
 
 (use-package! english-teacher
-  :hook ((Info-mode
-          elfeed-show-mode
-          eww-mode
-          Man-mode
-          Woman-Mode) . english-teacher-follow-mode)
+  ;; :hook ((Info-mode
+  ;;         elfeed-show-mode
+  ;;         eww-mode
+  ;;         Man-mode
+  ;;         Woman-Mode) . english-teacher-follow-mode)
   :config
   (setq english-teacher-show-result-function 'english-teacher-eldoc-show-result-function))
 
@@ -286,6 +286,3 @@
 
 
 (+global-word-wrap-mode +1)
-
-
-(toggle-frame-maximized)
