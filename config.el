@@ -27,7 +27,7 @@
       doom-serif-font (font-spec :family "WenQuanYi Micro Hei Mono" :size 26)
       doom-big-font (font-spec :family "iosevka" :size 26))
 
-(add-to-list 'doom-unicode-extra-fonts "WenQuanYi Micro Hei Mono" t)
+;;(add-to-list 'doom-unicode-extra-fonts "WenQuanYi Micro Hei Mono" t)
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -79,6 +79,12 @@
       lsp-file-watch-threshold 10000000
 
       default-input-method "rime"
+
+      TeX-engine 'xetex
+
+      conda-env-home-directory "~/.miniconda3/"
+      conda-anaconda-home "~/.miniconda3/"
+      lsp-pyright-venv-path "~/.miniconda3/envs/sci"
       )
 
 (setq-default c-basic-offset 2
