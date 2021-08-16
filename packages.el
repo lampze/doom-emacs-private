@@ -58,6 +58,7 @@
 (package! posframe)
 (package! company-tabnine)
 (package! org-static-blog)
+(package! org-fragtog)
 
 (when (featurep! :completion company)
   (package! company-scheme :recipe (:host github

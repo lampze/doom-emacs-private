@@ -93,7 +93,6 @@
               js-indent-level 2
               standard-indent 2)
 
-
 (after! org-re-reveal
   (setq org-re-reveal-root "https://cdn.jsdelivr.net/npm/reveal.js"))
 
@@ -128,6 +127,11 @@
         "~/.emacs.d/.local/etc/node/node_modules/mathjax-node-cli/bin/tex2svg"))
 
 
+(use-package! org-fragtog
+  :defer t
+  :hook (org-mode .  org-fragtog-mode))
+
+
 (use-package! english-teacher
   ;; :hook ((Info-mode
   ;;         elfeed-show-mode
@@ -140,7 +144,7 @@
 
 (use-package! rime
   :config
-  (setq rime-user-data-dir "~/.local/share/fcitx5/rime"
+  (setq rime-user-data-dir "~/.emacs.d/.local/etc/rime"
         rime-posframe-style 'vertical
         rime-show-candidate 'posframe)
   :custom
@@ -162,6 +166,26 @@
 (after! company
   (setq-default company-dabbrev-other-buffers 'all
                 company-tooltip-align-annotations t))
+
+
+(after! eglot
+  (add-to-list 'eglot-server-programs
+             '(python-mode . ("/home/shirui/.emacs.d/.local/etc/lsp/npm/pyright/bin/pyright-langserver" "--stdio")))
+)
+
+;; (add-hook 'python-mode-hook
+;;           (lambda ()
+;;             (setq-local eglot-workspace-configuration
+;;                   '((:python :pythonPath "/home/shirui/.miniconda3/envs/sci/bin/python")
+;;                     (:python :venvPath "/home/shirui/.miniconda3/envs/sci")))
+;;             )
+;;           )
+
+
+(add-hook 'org-mode-hook
+  (lambda ()
+    (plist-put org-format-latex-options :scale 3.0))
+  )
 
 
 (when (featurep! :ui pretty-code)

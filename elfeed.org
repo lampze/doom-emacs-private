@@ -99,6 +99,8 @@
 **** [[https://suool.net/atom.xml][SuooL's Blog]]
 **** [[http://blog.qinjian.me/atom.xml][K.I.S.S]]
 **** [[http://kakuguo.ink/feed.xml][kakuguo]]
+**** [[https://blog.hszofficial.site/feed][黄思喆]]
+**** [[https://zr9558.com/feed/][ZHANG RONG]]
 *** Cyber Security :secure:
 **** [[https://blog.werner.wiki/feed/][若水斋]]
 **** [[http://www.wupco.cn/?feed=rss2][Wupco's Blog]]
