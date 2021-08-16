@@ -129,7 +129,9 @@
 
 (use-package! org-fragtog
   :defer t
-  :hook (org-mode .  org-fragtog-mode))
+  :hook (org-mode .  org-fragtog-mode)
+  :config
+  (plist-put org-format-latex-options :scale 3.0))
 
 
 (use-package! english-teacher
@@ -180,12 +182,6 @@
 ;;                     (:python :venvPath "/home/shirui/.miniconda3/envs/sci")))
 ;;             )
 ;;           )
-
-
-(add-hook 'org-mode-hook
-  (lambda ()
-    (plist-put org-format-latex-options :scale 3.0))
-  )
 
 
 (when (featurep! :ui pretty-code)
