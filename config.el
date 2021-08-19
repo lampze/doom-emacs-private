@@ -203,25 +203,25 @@
 ;;   (eaf-bind-key take_photo "p" eaf-camera-keybinding))
 
 
-(use-package! snails
-  :bind (("C-x C-b" . snails)
-         ("C-x M-b" . snails-search-point))
-  :config
-  (require 'cl)
-  ;; (set-face-attribute 'snails-content-buffer-face nil :height 240)
-  )
+;; (use-package! snails
+;;   :bind (("C-x C-b" . snails)
+;;          ("C-x M-b" . snails-search-point))
+;;   :config
+;;   (require 'cl)
+;;   ;; (set-face-attribute 'snails-content-buffer-face nil :height 240)
+;;   )
 
 
-(use-package fuz
-  :defer t
-  :init
-  (defun load-fuz ()
-    "Load fuz.el."
-    (require 'fuz)
-    (unless (require 'fuz-core nil t)
-      (fuz-build-and-load-dymod)))
-  :hook ((after-init . load-fuz))
-  )
+;; (use-package fuz
+;;   :defer t
+;;   :init
+;;   (defun load-fuz ()
+;;     "Load fuz.el."
+;;     (require 'fuz)
+;;     (unless (require 'fuz-core nil t)
+;;       (fuz-build-and-load-dymod)))
+;;   :hook ((after-init . load-fuz))
+;;   )
 
 
 (use-package! graphviz-dot-mode
