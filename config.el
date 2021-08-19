@@ -68,6 +68,7 @@
       eaf-config-location "~/.emacs.d/.local/cache/eaf/"
       posframe-mouse-banish nil
       rmh-elfeed-org-files (list "~/.doom.d/elfeed.org")
+      org-agenda-files '("~/.org/" "~/.org/roam/" "~/.org/roam/daily")
 
       company-lsp-cache-candidates t
       company-lsp-async t
@@ -206,6 +207,7 @@
   :bind (("C-x C-b" . snails)
          ("C-x M-b" . snails-search-point))
   :config
+  (require 'cl)
   ;; (set-face-attribute 'snails-content-buffer-face nil :height 240)
   )
 
@@ -251,6 +253,9 @@
       "<meta  name=\"author\" content=\"lampze\" />
       <link href= \"static/style.css\" rel=\"stylesheet\" type=\"text/css\" />
       <link href= \"static/org.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <script src=\"https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js\"></script>
+      <script type=\"text/javascript\" id=\"MathJax-script\" async
+        src=\"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js\"></script>
       <meta http-equiv=\"content-type\" content=\"application/xhtml+xml; charset=UTF-8\" />
       <meta name=\"viewport\" content=\"initial-scale=1,width=device-width,minimum-scale=1\">")
 
@@ -281,7 +286,6 @@
            Creative Commons Attribution-ShareAlike 3.0 Unported License
          </a>.
        </center>
-       <script src=\"https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.slim.js\"></script>
        <script type=\"text/javascript\" src=\"static/main.js\"></script>")
 ;; org-static-blog config end
 
