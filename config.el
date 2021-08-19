@@ -247,7 +247,8 @@
       org-static-blog-index-length 6
       org-static-blog-enable-tags t
       org-static-blog-use-preview t
-      org-static-blog-preview-link-p t)
+      org-static-blog-preview-link-p t
+      org-static-blog-langcode "zh")
 
 (setq org-static-blog-page-header
       "<meta  name=\"author\" content=\"lampze\" />
