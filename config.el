@@ -88,6 +88,23 @@
       lsp-pyright-venv-path "~/.miniconda3/envs/sci"
       )
 
+
+(set-email-account! "qq"
+  '((mu4e-sent-folder       . "/qq/Sent Mail")
+    (mu4e-drafts-folder     . "/qq/Drafts")
+    (mu4e-trash-folder      . "/qq/Trash")
+    (mu4e-refile-folder     . "/qq/All Mail")
+    (smtpmail-smtp-user     . "1229408499@qq.com")
+    (user-mail-address      . "1229408499@qq.com")    ;; only needed for mu < 1.4
+    (mu4e-compose-signature . "")
+    (smtpmail-starttls-credentials . '(("smtp.qq.com" 587 nil nil)))
+    (smtpmail-default-smtp-server . "smtp.qq.com")
+    (smtpmail-smtp-server . "smtp.qq.com")
+    )
+  t)
+(auth-source-pass-enable)
+
+
 (setq-default c-basic-offset 2
               tab-width 2
               web-mode-markup-indent-offset 2
