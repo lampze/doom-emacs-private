@@ -103,6 +103,13 @@
     )
   t)
 (auth-source-pass-enable)
+(after! mu4e
+  (setq mu4e-headers-fields '((:account-stripe . 1)
+                              (:human-date . 14)
+                              (:flags . 6)
+                              (:from-or-to . 25)
+                              (:subject)))
+  )
 
 
 (setq-default c-basic-offset 2
