@@ -276,8 +276,8 @@
 
 (setq org-static-blog-page-header
       "<meta  name=\"author\" content=\"lampze\" />
-      <link href= \"static/style.css\" rel=\"stylesheet\" type=\"text/css\" />
-      <link href= \"static/org.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <link href= \"/static/style.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <link href= \"/static/org.css\" rel=\"stylesheet\" type=\"text/css\" />
       <script src=\"https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js\"></script>
       <script type=\"text/javascript\" id=\"MathJax-script\" async
         src=\"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js\"></script>
@@ -311,7 +311,7 @@
            Creative Commons Attribution-ShareAlike 3.0 Unported License
          </a>.
        </center>
-       <script type=\"text/javascript\" src=\"static/main.js\"></script>")
+       <script type=\"text/javascript\" src=\"/static/main.js\"></script>")
 ;; org-static-blog config end
 
 
