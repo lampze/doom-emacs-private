@@ -257,7 +257,13 @@
 
 (use-package! nov
   :init
-  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
+  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
+  (defun my-nov-font-setup ()
+    (face-remap-add-relative 'variable-pitch
+                             :family doom-font
+                             :height 1.0))
+  (add-hook 'nov-mode-hook 'my-nov-font-setup)
+  )
 
 
 ;; org-static-blog config start
