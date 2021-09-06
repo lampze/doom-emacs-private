@@ -22,7 +22,7 @@
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 (setq doom-font (font-spec :family "iosevka" :size 26)
-      doom-variable-pitch-font (font-spec :family "iosevka")
+      doom-variable-pitch-font (font-spec :family "iosevka" :size 26)
       doom-unicode-font (font-spec :family "WenQuanYi Micro Hei Mono" :size 26)
       doom-serif-font (font-spec :family "WenQuanYi Micro Hei Mono" :size 26)
       doom-big-font (font-spec :family "iosevka" :size 26))
@@ -258,11 +258,6 @@
 (use-package! nov
   :init
   (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
-  (defun my-nov-font-setup ()
-    (face-remap-add-relative 'variable-pitch
-                             :family doom-font
-                             :height 1.0))
-  (add-hook 'nov-mode-hook 'my-nov-font-setup)
   )
 
 
