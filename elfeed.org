@@ -22,7 +22,6 @@
 ***** [[http://export.arxiv.org/rss/cs.LG][机器学习]] :lg:
 ** Software Development :dev:
 *** Emacs :emacs:mustread:
-**** http://www.terminally-incoherent.com/blog/feed
 **** http://nullprogram.com/feed
 **** entry-title: \(emacs\|org-mode\)
 **** [[http://blog.binchen.org/rss.xml][Chen's blog]]
@@ -34,7 +33,7 @@
 **** [[http://blog.lujun9972.win/rss.xml][暗无天日]]
 **** [[https://brantou.github.io/atom.xml][Brantou的日常]]
 **** [[https://archive.casouri.cat/note/rss.xml][casouri]]
-**** [[https://eason0210.github.io/feed.xml][eason0210]]
+**** [[https://eason0210.github.io/index.xml][eason0210]]
 **** [[https://sunyour.org/index.xml][凡·记]]
 **** [[http://doglooksgood.github.io/rss][狗好看の世界]]
 **** [[http://blog.lujun9972.win/emacs-document/rss.xml][EMACS-DOCUMENT]]
@@ -44,7 +43,6 @@
 **** [[http://www.ruanyifeng.com/blog/atom.xml][阮一峰]]
 **** [[https://iovxw.net/rss.xml][iovxw]]
 **** [[https://rsshub.app/blogs/wangyin][王垠]]
-**** [[https://bloghub.fun/feeds][BlogHub]] :bloghub:
 **** [[https://interconnected.blog/rss/][Interconnected]]
 *** Lisp :lisp:
 **** [[https://www.zenlife.tk/feed.atom][zenlife]]
@@ -81,7 +79,6 @@
 **** [[http://feed.cnblogs.com/blog/u/177636/rss/][ChokCoco]]
 **** [[https://iachieveall.com/rss][贪婪的君子]]
 **** [[https://blog.mutoo.im/atom.xml][木匣子]]
-**** [[https://www.chenng.cn/rss][chenng]]
 **** [[https://lutaonan.com/rss.xml][Randy]]
 *** Hardward :hardward:
 *** Algorithm :algorithm:
@@ -90,7 +87,6 @@
 **** [[https://logicgrimoire.wordpress.com/feed/][the logic grimoire]]
 **** [[http://feeds.feedburner.com/zhihua-xblog][小赖子的英国生活和资讯]]
 **** [[https://111hunter.github.io/index.xml][浮槎的博客]]
-**** [[http://blog.miskcoo.com/feed][Miskcoo]]
 **** [[https://ridiqulous.com/feed/][RidiQulous]]
 **** [[http://arthurchiao.art/feed.xml][ArthurChiao]]
 **** [[https://edward852.github.io/index.xml][时聆心语]]
@@ -98,7 +94,6 @@
 **** [[https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Fwww.ruanx.net%2Frss%2F][Pion1eer]]
 **** [[https://suool.net/atom.xml][SuooL's Blog]]
 **** [[http://blog.qinjian.me/atom.xml][K.I.S.S]]
-**** [[http://kakuguo.ink/feed.xml][kakuguo]]
 **** [[https://blog.hszofficial.site/feed][黄思喆]]
 **** [[https://zr9558.com/feed/][ZHANG RONG]]
 *** Cyber Security :secure:
