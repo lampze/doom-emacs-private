@@ -1,7 +1,16 @@
 #+TITLE: Elfeed
 
 * RSS :elfeed:
-** entry-title: \(linux\|linus\|ubuntu\|kde\|gnome\) :linux:
+** Linux :linux:
+*** [[http://tinylab.org/rss.xml][泰晓科技]]
+*** [[https://trofi.github.io/feed/rss.xml][trofi]]
+*** [[http://abcdxyzk.github.io/atom.xml][kk Blog —— 通用基础]]
+*** [[https://farseerfc.me/zhs/feeds/atom.xml][Farseerfc的小窝]]
+*** [[https://blog.bbskali.cn/feed][Kali's Blog]]
+*** [[https://jaminzhang.github.io/rss/][Jamin Zhang]]
+*** [[https://www.myfreax.com/rss/][myfreax]]
+*** [[https://nan01ab.github.io/rss][Columba M71]]
+*** [[https://www.redpill-linpro.com/techblog/feed.xml][techblog]]
 *** [[https://jia.je/feed.xml][杰哥的{运维,编程,调板子}小笔记]]
 ** Content Platform
 *** [[https://www.zhihu.com/rss][知乎精选]] :zhihu:
@@ -13,19 +22,18 @@
 *** [[https://www.gcores.com/rss][机核]]
 *** [[https://www.yystv.cn/rss/feed][游研社]]
 ** Academic :science:
-**** [[https://iseex.github.io/feed.xml][青柠学术]]
-**** Arxiv :arxiv:
-***** [[http://export.arxiv.org/rss/cs.CV][机器视觉]] :cv:
-***** [[http://export.arxiv.org/rss/cs.DS][数据结构与算法]] :ds:
-***** [[http://export.arxiv.org/rss/cs.AI][人工智能]] :ai:
-***** [[http://export.arxiv.org/rss/cs.PL][编程语言]] :pl:
-***** [[http://export.arxiv.org/rss/cs.LG][机器学习]] :lg:
-**** [[https://kexue.fm/feed][科学空间]]
-**** [[https://kitchingroup.cheme.cmu.edu/blog/feed/index.xml][The Kitchin Research Group]]
+*** [[https://iseex.github.io/feed.xml][青柠学术]]
+*** Arxiv :arxiv:
+**** [[http://export.arxiv.org/rss/cs.CV][机器视觉]] :cv:
+**** [[http://export.arxiv.org/rss/cs.DS][数据结构与算法]] :ds:
+**** [[http://export.arxiv.org/rss/cs.AI][人工智能]] :ai:
+**** [[http://export.arxiv.org/rss/cs.PL][编程语言]] :pl:
+**** [[http://export.arxiv.org/rss/cs.LG][机器学习]] :lg:
+*** [[https://kexue.fm/feed][科学空间]]
+*** [[https://kitchingroup.cheme.cmu.edu/blog/feed/index.xml][The Kitchin Research Group]]
 ** Software Development :dev:
 *** Emacs :emacs:mustread:
 **** http://nullprogram.com/feed
-**** entry-title: \(emacs\|org-mode\)
 **** [[http://blog.binchen.org/rss.xml][Chen's blog]]
 **** [[https://zilongshanren.com/index.xml][子龙山人]]
 **** [[https://www.zmonster.me/atom.xml][ZMonster's Blog]]
@@ -41,6 +49,7 @@
 **** [[http://blog.lujun9972.win/emacs-document/rss.xml][EMACS-DOCUMENT]]
 **** [[https://oremacs.com/atom.xml][oremacs]]
 **** [[https://d12frosted.io/atom.xml][Boris Buliga]]
+**** [[https://geekinney.com/index.xml][Happy Hacking!]]
 *** Web Development :web:
 *** Comprehensive :mustread:
 **** [[http://www.ruanyifeng.com/blog/atom.xml][阮一峰]]
@@ -51,16 +60,6 @@
 **** [[https://www.zenlife.tk/feed.atom][zenlife]]
 **** [[http://matt.might.net/articles/feed.rss][Matt Might's blog]]
 **** [[https://saintwinkle.com/rss.xml][星雨之夜]]
-*** Linux :linux:
-**** [[http://tinylab.org/rss.xml][泰晓科技]]
-**** [[https://trofi.github.io/feed/rss.xml][trofi]]
-**** [[http://abcdxyzk.github.io/atom.xml][kk Blog —— 通用基础]]
-**** [[https://farseerfc.me/zhs/feeds/atom.xml][Farseerfc的小窝]]
-**** [[https://blog.bbskali.cn/feed][Kali's Blog]]
-**** [[https://jaminzhang.github.io/rss/][Jamin Zhang]]
-**** [[https://www.myfreax.com/rss/][myfreax]]
-**** [[https://nan01ab.github.io/rss][Columba M71]]
-**** [[https://www.redpill-linpro.com/techblog/feed.xml][techblog]]
 *** Back-end :bend:
 **** [[https://liujiacai.net/atom.xml][Keep Coding]]
 **** [[https://best33.com/feed][做最好的三三]]
@@ -114,17 +113,16 @@
 *** [[https://wiseodd.github.io/feed.xml][Agustinus Kristiadi's Blog]]
 ** Other :other:
 *** [[https://www.changhai.org/feed.xml][卢昌海个人主页]] :changhai:
+*** [[https://jacobzuo.github.io/feed.xml][Jacob Zuo]]
 * I can't get the rss
++ http://ishero.net/
 + https://wowothink.com/
 + http://fuzihao.org/blog/
 + https://tautcony.xyz/
-+ http://ishero.net/
-+ https://geekinney.com/
 + https://blog.linyxus.xyz/
 + https://stopa.io/
 + https://www.albertzhou.net/
 + http://www.pengzhihui.xyz/
-+ https://jacobzuo.github.io/
 + https://www.52coding.com.cn/
 + https://thomas-tanay.github.io/
 + https://lars.ingebrigtsen.no/
