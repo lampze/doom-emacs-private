@@ -68,7 +68,6 @@
       eaf-config-location "~/.emacs.d/.local/cache/eaf/"
       posframe-mouse-banish nil
       rmh-elfeed-org-files (list "~/.doom.d/elfeed.org")
-      org-agenda-files '("~/.org/" "~/.org/roam/" "~/.org/roam/daily")
 
       company-lsp-cache-candidates t
       company-lsp-async t
@@ -339,6 +338,25 @@
 ;; disable org-mode's auto wrap
 (remove-hook 'org-mode-hook 'auto-fill-mode)
 (remove-hook 'text-mode-hook 'auto-fill-mode)
+
+(set-company-backend! 'org-mode
+  '(:separate  company-math-symbols-latex company-latex-commands))
+
+(defun daviwil/org-roam-filter-by-tag (tag-name)
+  (lambda (node)
+    (member tag-name (org-roam-node-tags node))))
+
+(defun daviwil/org-roam-list-notes-by-tag (tag-name)
+  (mapcar #'org-roam-node-file
+          (seq-filter
+           (daviwil/org-roam-filter-by-tag tag-name)
+           (org-roam-node-list))))
+
+(defun daviwil/org-roam-refresh-agenda-list ()
+  (interactive)
+  (setq org-agenda-files (daviwil/org-roam-list-notes-by-tag "Agenda")))
+
+(daviwil/org-roam-refresh-agenda-list)
 
 
 (+global-word-wrap-mode +1)
