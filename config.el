@@ -355,8 +355,46 @@
 (defun daviwil/org-roam-refresh-agenda-list ()
   (interactive)
   (setq org-agenda-files (daviwil/org-roam-list-notes-by-tag "Agenda")))
+           ;; :include ,(cons "index.org"
+           ;;                 (mapcar (lambda (x) (string-remove-prefix org-roam-directory x))
+           ;;                         (daviwil/org-roam-list-notes-by-tag "Blog")))
+(defun lampze/org-publish-refresh-project-alist ()
+  (interactive)
+  (setq org-publish-project-alist
+        `(("blog"
+           :base-directory "~/.org/roam"
+           :exclude ".*"
+           :include ,(mapcar (lambda (x) (string-remove-prefix org-roam-directory x))
+                             (daviwil/org-roam-list-notes-by-tag "Blog"))
+           :publishing-function org-html-publish-to-html
+           :publishing-directory "~/.blog/"
+           :section-numbers nil
+           :recursive t
+           :language "zh"
+           :preserve-breaks t
+           :headline-levels 3
+           :html-doctype "html5"
+           :html-html5-fancy t
+           :html-head
+           "<link rel=\"stylesheet\" href=\"/static/style.css\" type=\"text/css\"/>
+            <link rel=\"stylesheet\" href=\"/static/org.css\" type=\"text/css\"/>
+            <script src=\"https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js\"></script>
+            <meta http-equiv=\"content-type\" content=\"application/xhtml+xml; charset=UTF-8\" />
+            <meta name=\"viewport\" content=\"initial-scale=1,width=device-width,minimum-scale=1\">"
+           :html-preamble
+           "<div class=\"header\">
+            <a href=\"https://lampze.github.io\">lampze's Blog</a>
+            </div>"
+           :html-postamble
+           "<script type=\"text/javascript\" src=\"/static/main.js\"></script>"
+           :auto-sitemap t
+           :sitemap-title "Blog Posts"
+           :sitemap-filename "index.org"
+           :sitemap-sort-files anti-chronologically
+           ))))
 
 (daviwil/org-roam-refresh-agenda-list)
+(lampze/org-publish-refresh-project-alist)
 
 
 (+global-word-wrap-mode +1)
