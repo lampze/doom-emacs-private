@@ -140,15 +140,15 @@
     '(company-tabnine company-capf) 'company-yasnippet))
 
 
-(use-package! org-latex-impatient
-  :defer t
-  :hook (org-mode . org-latex-impatient-mode)
-  :config
-  (setq org-latex-impatient-scale 2.5)
-  :init
-  (setq org-latex-impatient-tex2svg-bin
-        ;; location of tex2svg executable
-        "~/.emacs.d/.local/etc/node/node_modules/mathjax-node-cli/bin/tex2svg"))
+;; (use-package! org-latex-impatient
+;;   :defer t
+;;   :hook (org-mode . org-latex-impatient-mode)
+;;   :config
+;;   (setq org-latex-impatient-scale 2.5)
+;;   :init
+;;   (setq org-latex-impatient-tex2svg-bin
+;;         ;; location of tex2svg executable
+;;         "~/.emacs.d/.local/etc/node/node_modules/mathjax-node-cli/bin/tex2svg"))
 
 
 (use-package! org-fragtog
