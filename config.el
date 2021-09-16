@@ -339,6 +339,9 @@
 (remove-hook 'org-mode-hook 'auto-fill-mode)
 (remove-hook 'text-mode-hook 'auto-fill-mode)
 
+(+global-word-wrap-mode +1)
+
+
 (set-company-backend! 'org-mode
   '(:separate  company-math-symbols-latex company-latex-commands))
 
@@ -355,9 +358,7 @@
 (defun daviwil/org-roam-refresh-agenda-list ()
   (interactive)
   (setq org-agenda-files (daviwil/org-roam-list-notes-by-tag "Agenda")))
-           ;; :include ,(cons "index.org"
-           ;;                 (mapcar (lambda (x) (string-remove-prefix org-roam-directory x))
-           ;;                         (daviwil/org-roam-list-notes-by-tag "Blog")))
+
 (defun lampze/org-publish-refresh-project-alist ()
   (interactive)
   (setq org-publish-project-alist
@@ -384,17 +385,28 @@
            :html-preamble
            "<div class=\"header\">
             <a href=\"https://lampze.github.io\">lampze's Blog</a>
+            <span id=\"post-date\" style=\"float: right\">%d</span>
             </div>"
            :html-postamble
-           "<script type=\"text/javascript\" src=\"/static/main.js\"></script>"
+           "<script type=\"text/javascript\" src=\"/static/main.js\"></script>
+            <center id=\"modi-date\">%T</center>"
            :auto-sitemap t
-           :sitemap-title "Blog Posts"
+           :sitemap-title "我的文章"
            :sitemap-filename "index.org"
            :sitemap-sort-files anti-chronologically
+           :sitemap-format-entry (lambda (entry style project)
+                                   (cond ((not (directory-name-p entry))
+	                                  (format "<%s> [[file:%s][%s]]"
+                                                  (format-time-string
+                                                   "%Y-%m-%d"
+                                                   (org-publish-find-date entry project))
+		                                  entry
+		                                  (org-publish-find-title entry project)))
+	                                 ((eq style 'tree)
+	                                  ;; Return only last subdir.
+	                                  (file-name-nondirectory (directory-file-name entry)))
+	                                 (t entry)))
            ))))
 
 (daviwil/org-roam-refresh-agenda-list)
 (lampze/org-publish-refresh-project-alist)
-
-
-(+global-word-wrap-mode +1)
