@@ -18,6 +18,7 @@
 *** [[https://hellogithub.com/rss][HelloGitHub]]
 *** [[https://www.v2ex.com/index.xml][v2ex]] :v2ex:
 *** [[https://sspai.typlog.io/episodes/feed.xml][少数派]] :sspai:
+*** [[https://www.infoq.cn/feed.xml][InfoQ]] :infoq:
 ** Game :game:
 *** [[https://www.gcores.com/rss][机核]]
 *** [[https://www.yystv.cn/rss/feed][游研社]]

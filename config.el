@@ -85,6 +85,8 @@
       conda-env-home-directory "~/.miniconda3/"
       conda-anaconda-home "~/.miniconda3/"
       lsp-pyright-venv-path "~/.miniconda3/envs/sci"
+
+      elfeed-goodies/entry-pane-position 'bottom
       )
 
 
