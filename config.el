@@ -87,6 +87,8 @@
       lsp-pyright-venv-path "~/.miniconda3/envs/sci"
 
       elfeed-goodies/entry-pane-position 'bottom
+
+      org-log-done 'time
       )
 
 
