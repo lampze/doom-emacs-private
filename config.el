@@ -410,3 +410,8 @@
 
 (daviwil/org-roam-refresh-agenda-list)
 (lampze/org-publish-refresh-project-alist)
+
+;; for emacs-29 bug: wrong-number-of-arguments: #<subr general-unbind-non-prefix-key> 5
+;; https://github.com/hlissner/doom-emacs/issues/5785
+(general-auto-unbind-keys :off)
+(remove-hook 'doom-after-init-modules-hook #'general-auto-unbind-keys)
