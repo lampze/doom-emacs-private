@@ -59,6 +59,9 @@
 (package! company-tabnine)
 (package! org-static-blog)
 (package! org-fragtog)
+(package! xmind-org)
+
+(package! elfeed-goodies :disable t)
 
 (when (featurep! :completion company)
   (package! company-scheme :recipe (:host github

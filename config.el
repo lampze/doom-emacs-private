@@ -82,8 +82,6 @@
 
       TeX-engine 'xetex
 
-      elfeed-goodies/entry-pane-position 'bottom
-
       org-log-done 'time
       )
 
