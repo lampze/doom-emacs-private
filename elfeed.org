@@ -24,7 +24,7 @@
 *** [[https://www.gcores.com/rss][机核]]
 *** [[https://www.yystv.cn/rss/feed][游研社]]
 ** Academic :science:
-*** [[https://iseex.github.io/feed.xml][青柠学术]]
+*** [[https://qnscholar.github.io/feed.xml][青柠学术]]
 *** Arxiv :arxiv:
 **** [[http://export.arxiv.org/rss/cs.CV][机器视觉]] :cv:
 **** [[http://export.arxiv.org/rss/cs.DS][数据结构与算法]] :ds:
