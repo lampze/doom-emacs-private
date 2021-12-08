@@ -413,3 +413,5 @@
 ;; https://github.com/hlissner/doom-emacs/issues/5785
 (general-auto-unbind-keys :off)
 (remove-hook 'doom-after-init-modules-hook #'general-auto-unbind-keys)
+
+(pixel-scroll-precision-mode)
