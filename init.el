@@ -31,7 +31,7 @@
        doom              ; what makes DOOM look the way it does
        ;;doom-dashboard    ; a nifty splash screen for Emacs
        ;;doom-quit         ; DOOM quit-message prompts when you quit Emacs
-       ;;fill-column       ; a `fill-column' indicator
+       (emoji +unicode)  ; 🙂
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
        ;;hydra
        indent-guides     ; highlighted indent columns
@@ -79,12 +79,13 @@
        vterm             ; the best terminal emulation in Emacs
 
        :checkers
-       syntax            ; tasing you for every semicolon you forget
-       spell             ; tasing you for misspelling mispelling
+       syntax              ; tasing you for every semicolon you forget
+       (spell +flyspell) ; tasing you for misspelling mispelling
        grammar           ; tasing grammar mistake every you make
 
        :tools
        ;;ansible
+       biblio            ; Writes a PhD for you (citation needed)
        (debugger +lsp)          ; FIXME stepping through code, to help you add bugs
        ;;direnv
        ;;docker
@@ -127,6 +128,7 @@
        ;;ess               ; emacs speaks statistics
        ;;factor
        ;;faust             ; dsp, but you get to keep your soul
+       ;;fortran           ; in FORTRAN, GOD is REAL (unless declared INTEGER)
        ;;fsharp            ; ML stands for Microsoft's Language
        ;;fstar             ; (dependent) types and (monadic) effects and Z3
        ;;gdscript          ; the language you waited for
