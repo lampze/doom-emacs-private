@@ -56,7 +56,6 @@
 (package! nov)
 (package! rime)
 (package! posframe)
-(package! company-tabnine)
 (package! org-static-blog)
 (package! org-fragtog)
 (package! xmind-org)
@@ -67,22 +66,5 @@
   (package! company-scheme :recipe (:host github
                                     :repo "lampze/company-scheme")))
 
-;; (package! snalis :recipe (:host github
-;;                           :repo "manateelazycat/snails"))
-
-;; (package! eaf :recipe (:host github
-;;                        :repo "manateelazycat/emacs-application-framework"
-;;                        :files ("*")))
-
-;; (package! nox :recipe (:host github
-;;                        :repo "manateelazycat/nox"))
-
-;; (package! fuz :recipe (:host github
-;;                        :repo "rustify-emacs/fuz.el"
-;;                        :files ("*")))
-
 (package! english-teacher :recipe (:host github
                                    :repo "loyalpartner/english-teacher.el"))
-
-;; (package! org-latex-impatient :recipe (:host github
-;;                                              :repo "yangsheng6810/org-latex-impatient"))

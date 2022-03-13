@@ -83,6 +83,9 @@
       TeX-engine 'xetex
 
       org-log-done 'time
+
+      ;; enable pylsp format
+      lsp-pylsp-plugins-autopep8-enabled t
       )
 
 
@@ -127,15 +130,6 @@
        "C-d" 'ivy-switch-buffer-kill)
       (:map org-mode-map
        "ESC <left>" 'org-metaleft))
-
-
-(use-package! company-tabnine
-  :after company
-  :when (featurep! :completion company)
-  :config
-  (setq +lsp-company-backends '(:separate company-tabnine company-capf))
-  (set-company-backend! 'prog-mode
-    '(company-tabnine company-capf) 'company-yasnippet))
 
 
 ;; (use-package! org-latex-impatient
@@ -190,20 +184,6 @@
 (after! company
   (setq-default company-dabbrev-other-buffers 'all
                 company-tooltip-align-annotations t))
-
-
-(after! eglot
-  (add-to-list 'eglot-server-programs
-             '(python-mode . ("/home/shirui/.emacs.d/.local/etc/lsp/npm/pyright/bin/pyright-langserver" "--stdio")))
-)
-
-;; (add-hook 'python-mode-hook
-;;           (lambda ()
-;;             (setq-local eglot-workspace-configuration
-;;                   '((:python :pythonPath "/home/shirui/.miniconda3/envs/sci/bin/python")
-;;                     (:python :venvPath "/home/shirui/.miniconda3/envs/sci")))
-;;             )
-;;           )
 
 
 (when (featurep! :ui pretty-code)
