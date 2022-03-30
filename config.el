@@ -132,6 +132,9 @@
        "ESC <left>" 'org-metaleft))
 
 
+(use-package! guess-word)
+
+
 ;; (use-package! org-latex-impatient
 ;;   :defer t
 ;;   :hook (org-mode . org-latex-impatient-mode)

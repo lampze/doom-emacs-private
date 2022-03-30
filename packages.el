@@ -68,3 +68,7 @@
 
 (package! english-teacher :recipe (:host github
                                    :repo "loyalpartner/english-teacher.el"))
+
+(package! emacs-guess-word-game :recipe (:host github
+                                         :repo "Qquanwei/emacs-guess-word-game"
+                                         :files ("*")))
