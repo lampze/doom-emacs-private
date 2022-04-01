@@ -77,6 +77,7 @@
       lsp-enable-snippet t
       lsp-auto-configure t
       lsp-file-watch-threshold 10000000
+      lsp-signature-function 'lsp-signature-posframe
 
       default-input-method "rime"
 
