@@ -62,13 +62,13 @@
 
 (package! elfeed-goodies :disable t)
 
-(when (featurep! :completion company)
+(when (modulep! :completion company)
   (package! company-scheme :recipe (:host github
                                     :repo "lampze/company-scheme")))
-
-(package! english-teacher :recipe (:host github
-                                   :repo "loyalpartner/english-teacher.el"))
 
 (package! emacs-guess-word-game :recipe (:host github
                                          :repo "Qquanwei/emacs-guess-word-game"
                                          :files ("*")))
+
+(package! read-aloud :recipe (:host github
+                              :repo "gromnitsky/read-aloud.el"))

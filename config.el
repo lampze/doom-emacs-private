@@ -87,6 +87,8 @@
 
       ;; enable pylsp format
       lsp-pylsp-plugins-autopep8-enabled t
+
+      read-aloud-engine "flite"
       )
 
 
@@ -133,6 +135,10 @@
        "ESC <left>" 'org-metaleft))
 
 
+(defalias 'xbb
+   (kmacro "C-a | C-M-s [ a - z ] <return> C-b | C-s / <return> C-b | C-f C-s / <return> | C-e | C-n C-a"))
+
+
 (use-package! guess-word)
 
 
@@ -152,16 +158,6 @@
   :hook (org-mode .  org-fragtog-mode)
   :config
   (plist-put org-format-latex-options :scale 3.0))
-
-
-(use-package! english-teacher
-  ;; :hook ((Info-mode
-  ;;         elfeed-show-mode
-  ;;         eww-mode
-  ;;         Man-mode
-  ;;         Woman-Mode) . english-teacher-follow-mode)
-  :config
-  (setq english-teacher-show-result-function 'english-teacher-eldoc-show-result-function))
 
 
 (use-package! rime
