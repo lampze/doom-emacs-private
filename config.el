@@ -89,6 +89,9 @@
       lsp-pylsp-plugins-autopep8-enabled t
 
       read-aloud-engine "flite"
+
+      vertico-posframe-parameters '((left-fringe . 8)
+                                    (right-fringe . 8))
       )
 
 
@@ -133,10 +136,6 @@
        "C-d" 'ivy-switch-buffer-kill)
       (:map org-mode-map
        "ESC <left>" 'org-metaleft))
-
-
-(defalias 'xbb
-   (kmacro "C-a | C-M-s [ a - z ] <return> C-b | C-s / <return> C-b | C-f C-s / <return> | C-e | C-n C-a"))
 
 
 (use-package! guess-word)
@@ -186,7 +185,7 @@
                 company-tooltip-align-annotations t))
 
 
-(when (featurep! :ui pretty-code)
+(when (modulep! :ui pretty-code)
   (set-pretty-symbols! 'scheme-mode
     :lambda "lambda"))
 
@@ -309,7 +308,7 @@
       version-control t)
 
 
-(when (not (featurep! :ui doom-quit))
+(when (not (modulep! :ui doom-quit))
   (setq confirm-kill-emacs nil))
 
 
@@ -389,4 +388,4 @@
 (daviwil/org-roam-refresh-agenda-list)
 (lampze/org-publish-refresh-project-alist)
 
-(pixel-scroll-precision-mode)
+;;(pixel-scroll-precision-mode)
