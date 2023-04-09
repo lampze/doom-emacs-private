@@ -8,10 +8,16 @@
 *** [[https://farseerfc.me/zhs/feeds/atom.xml][Farseerfc的小窝]]
 *** [[https://blog.bbskali.cn/feed][Kali's Blog]]
 *** [[https://jaminzhang.github.io/rss/][Jamin Zhang]]
-*** [[https://www.myfreax.com/rss/][myfreax]]
 *** [[https://nan01ab.github.io/rss][Columba M71]]
 *** [[https://www.redpill-linpro.com/techblog/feed.xml][techblog]]
 *** [[https://jia.je/feed.xml][杰哥的{运维,编程,调板子}小笔记]]
+*** [[https://amedeos.github.io/feed.xml][amedeos]]
+*** [[https://blog.tapiocanation.xyz/atom.xml][Gingermilk]]
+*** [[https://ttys3.dev/atom.xml][ttyS3]]
+*** [[https://wzyboy.im/feed.xml][wzyboy]]
+*** [[https://iecho.cc/atom.xml][nonPointer]]
+*** [[https://www.aloxaf.com/atom.xml][Aloxaf]]
+*** [[https://p3terx.com/feed/][P3TERX ZONE]]
 ** Content Platform
 *** [[https://www.zhihu.com/rss][知乎精选]] :zhihu:
 *** [[http://feeds.feedburner.com/zhihu-daily][知乎日报]] :zhihu:
@@ -25,12 +31,6 @@
 *** [[https://www.yystv.cn/rss/feed][游研社]]
 ** Academic :science:
 *** [[https://qnscholar.github.io/feed.xml][青柠学术]]
-*** Arxiv :arxiv:
-**** [[http://export.arxiv.org/rss/cs.CV][机器视觉]] :cv:
-**** [[http://export.arxiv.org/rss/cs.DS][数据结构与算法]] :ds:
-**** [[http://export.arxiv.org/rss/cs.AI][人工智能]] :ai:
-**** [[http://export.arxiv.org/rss/cs.PL][编程语言]] :pl:
-**** [[http://export.arxiv.org/rss/cs.LG][机器学习]] :lg:
 *** [[https://kexue.fm/feed][科学空间]]
 *** [[https://kitchingroup.cheme.cmu.edu/blog/feed/index.xml][The Kitchin Research Group]]
 ** Software Development :dev:
@@ -52,6 +52,13 @@
 **** [[https://oremacs.com/atom.xml][oremacs]]
 **** [[https://d12frosted.io/atom.xml][Boris Buliga]]
 **** [[https://geekinney.com/index.xml][Happy Hacking!]]
+**** [[https://www.shellcodes.org/rss.xml][LU4NX]]
+**** [[https://eason0210.github.io/index.xml][eason0210]]
+**** [[https://karthinks.com/index.xml][Karthinks]]
+**** [[https://protesilaos.com/codelog.xml][Protesilaos Stavrou]]
+**** [[https://isamert.net/feed/main.xml][isamert]]
+**** [[https://jherrlin.github.io/index.xml][jherrlin]]
+**** [[https://whatacold.io/zh-cn/rss.xml][whatacold]]
 *** Web Development :web:
 *** Comprehensive :mustread:
 **** [[http://www.ruanyifeng.com/blog/atom.xml][阮一峰]]
@@ -79,14 +86,17 @@
 **** [[https://colobu.com/atom.xml][鸟窝]]
 **** [[https://www.ihewro.com/feed/][友人C]]
 **** [[https://matklad.github.io/feed.xml][matklad]]
-**** [[https://blog.zongwu233.com/rss.xml][zongwu's blog]]
 **** [[https://devbins.github.io/index.xml][devbins blog]]
+**** [[https://blog.imdst.com/rss/][MengBo'Li]]
+**** [[https://feed.cnblogs.com/blog/u/658912/rss/][Silent丿丶黑羽]]
+**** [[http://foreversmart.cc/index.xml][Foreversmart]]
 *** Front-end :fend:
 **** [[https://coldstone.fun/atom.xml][冷石]]
 **** [[http://feed.cnblogs.com/blog/u/177636/rss/][ChokCoco]]
 **** [[https://iachieveall.com/rss][贪婪的君子]]
 **** [[https://blog.mutoo.im/atom.xml][木匣子]]
 **** [[https://lutaonan.com/rss.xml][Randy]]
+**** [[https://josephg.com/blog/rss/][Seph]]
 *** Hardward :hardward:
 *** Algorithm :algorithm:
 **** [[https://taodaling.github.io/feed][Daltao]]
@@ -97,12 +107,16 @@
 **** [[https://ridiqulous.com/feed/][RidiQulous]]
 **** [[http://arthurchiao.art/feed.xml][ArthurChiao]]
 **** [[https://edward852.github.io/index.xml][时聆心语]]
+**** [[http://www.matrix67.com/blog/feed][Matrix67]]
+**** [[https://www.jvruo.com/feed/][蒟蒻]]
 *** Artificial Intelligence :ai:
-**** [[https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Fwww.ruanx.net%2Frss%2F][Pion1eer]]
-**** [[https://suool.net/atom.xml][SuooL's Blog]]
 **** [[http://blog.qinjian.me/atom.xml][K.I.S.S]]
 **** [[https://blog.hszofficial.site/feed][黄思喆]]
 **** [[https://zr9558.com/feed/][ZHANG RONG]]
+**** [[https://yeah366.com/index.xml][AI Tech]]
+**** [[https://blog.ailemon.net/feed/][AI柠檬]]
+**** [[http://fancyerii.github.io/feed.xml][李理]]
+**** [[https://blog.zhujian.life/atom.xml][大海]]
 *** Cyber Security :secure:
 **** [[https://blog.werner.wiki/feed/][若水斋]]
 **** [[http://www.wupco.cn/?feed=rss2][Wupco's Blog]]
@@ -113,9 +127,12 @@
 ** Math :math:
 *** [[http://lanqi.org/feed/][Math173]]
 *** [[https://wiseodd.github.io/feed.xml][Agustinus Kristiadi's Blog]]
+*** [[https://zengfk.com.cn/atom.xml][虎头微分同学]]
 ** Other :other:
 *** [[https://www.changhai.org/feed.xml][卢昌海个人主页]] :changhai:
 *** [[https://jacobzuo.github.io/feed.xml][Jacob Zuo]]
+*** [[https://jesselau.com/index.xml][遁一]]
+*** [[http://jpliu.github.io/atom.xml][jpliu]]
 * I can't get the rss
 + http://ishero.net/
 + https://wowothink.com/
@@ -129,3 +146,42 @@
 + https://thomas-tanay.github.io/
 + https://lars.ingebrigtsen.no/
 + http://www.wouterspekkink.org/
++ https://0x100.club/
++ https://blog.jethro.dev/
++ https://www.cnblogs.com/dogecheng/
++ https://qsdrqs.site/
++ https://joeyxf.com/
++ https://medium.com/ching-i
++ https://note.koko.guru/
++ https://i-m.dev/
++ https://jasonxqh.github.io/
++ https://timdettmers.com/
++ https://leemeng.tw/index.html
++ https://taingram.org/
++ https://www.ylkz.life/
++ https://clay-atlas.com/
++ https://ifwind.github.io/
++ http://learn.lianglianglee.com/
++ https://eater.net/
++ https://tonydeng.github.io/
++ https://kagamine.xyz/
++ https://qiqijin.com/
++ https://welts.xyz/
++ https://liyafu.com/
++ http://incf19.com/yynotes/
++ https://then.tw/
++ http://xahlee.info/
++ https://www.d0z.net/
++ https://daydayreview.com/
++ https://moecm.com/
++ https://uzbox.com/
+** [[https://suool.net/atom.xml][SuooL's Blog]]
+** [[https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Fwww.ruanx.net%2Frss%2F][Pion1eer]]
+** [[https://www.myfreax.com/rss/][myfreax]]
+** [[https://blog.zongwu233.com/rss.xml][zongwu's blog]]
+* Arxiv :arxiv:
+** [[http://export.arxiv.org/rss/cs.CV][机器视觉]] :cv:
+** [[http://export.arxiv.org/rss/cs.DS][数据结构与算法]] :ds:
+** [[http://export.arxiv.org/rss/cs.AI][人工智能]] :ai:
+** [[http://export.arxiv.org/rss/cs.PL][编程语言]] :pl:
+** [[http://export.arxiv.org/rss/cs.LG][机器学习]] :lg:
