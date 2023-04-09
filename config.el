@@ -64,10 +64,10 @@
       frame-resize-pixelwise t
       markdown-command "pandoc"
       evil-default-state 'emacs
-      nov-save-place-file "~/.emacs.d/.local/cache/nov-places"
-      eaf-config-location "~/.emacs.d/.local/cache/eaf/"
+      nov-save-place-file "~/.config/emacs/.local/cache/nov-places"
+      eaf-config-location "~/.config/emacs/.local/cache/eaf/"
       posframe-mouse-banish nil
-      rmh-elfeed-org-files (list "~/.doom.d/elfeed.org")
+      rmh-elfeed-org-files (list "~/.config/doom/elfeed.org")
 
       company-lsp-cache-candidates t
       company-lsp-async t
@@ -149,7 +149,7 @@
 ;;   :init
 ;;   (setq org-latex-impatient-tex2svg-bin
 ;;         ;; location of tex2svg executable
-;;         "~/.emacs.d/.local/etc/node/node_modules/mathjax-node-cli/bin/tex2svg"))
+;;         "~/.config/emacs/.local/etc/node/node_modules/mathjax-node-cli/bin/tex2svg"))
 
 
 (use-package! org-fragtog
@@ -161,7 +161,7 @@
 
 (use-package! rime
   :config
-  (setq rime-user-data-dir "~/.emacs.d/.local/etc/rime"
+  (setq rime-user-data-dir "~/.config/emacs/.local/etc/rime"
         rime-posframe-style 'vertical
         rime-show-candidate 'posframe)
   :custom
