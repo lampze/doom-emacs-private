@@ -59,6 +59,7 @@
 (package! org-static-blog)
 (package! org-fragtog)
 (package! xmind-org)
+(package! zotxt)
 
 (package! elfeed-goodies :disable t)
 
@@ -72,3 +73,5 @@
 
 (package! read-aloud :recipe (:host github
                               :repo "gromnitsky/read-aloud.el"))
+
+(unpin! poetry)

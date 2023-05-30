@@ -141,6 +141,10 @@
 (use-package! guess-word)
 
 
+(use-package! zotxt
+  :hook (org-mode . org-zotxt-mode))
+
+
 ;; (use-package! org-latex-impatient
 ;;   :defer t
 ;;   :hook (org-mode . org-latex-impatient-mode)
