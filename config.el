@@ -156,6 +156,39 @@
 ;;         "~/.config/emacs/.local/etc/node/node_modules/mathjax-node-cli/bin/tex2svg"))
 
 
+  (defun linw1995/pdm-get-python-executable (&optional dir)
+    (let ((pdm-get-python-cmd "pdm info --python"))
+      (string-trim
+       (shell-command-to-string
+        (if dir
+            (concat "cd "
+                    dir
+                    " && "
+                    pdm-get-python-cmd)
+          pdm-get-python-cmd)))))
+
+  (defun linw1995/pdm-get-packages-path (&optional dir)
+    (let ((pdm-get-packages-cmd "pdm run bash -c 'printenv PEP582_PACKAGES'"))
+      (concat (string-trim
+               (shell-command-to-string
+                (if dir
+                    (concat "cd "
+                            dir
+                            " && "
+                            pdm-get-packages-cmd)
+                  pdm-get-packages-cmd)))
+              "/lib")))
+
+(use-package! lsp-pyright
+  :ensure t
+  :hook (python-mode . (lambda ()
+                         (setq lsp-pyright-extra-paths (vector (linw1995/pdm-get-packages-path)))
+                         (setq lsp-pyright-auto-search-paths (linw1995/pdm-get-python-executable))
+                         (setq lsp-pyright-venv-path (linw1995/pdm-get-python-executable))
+                          (require 'lsp-pyright)
+                          (lsp))))
+
+
 (use-package! org-fragtog
   :defer t
   :hook (org-mode .  org-fragtog-mode)

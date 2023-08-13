@@ -73,5 +73,3 @@
 
 (package! read-aloud :recipe (:host github
                               :repo "gromnitsky/read-aloud.el"))
-
-(unpin! poetry)
