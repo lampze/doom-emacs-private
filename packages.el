@@ -73,3 +73,7 @@
 
 (package! read-aloud :recipe (:host github
                               :repo "gromnitsky/read-aloud.el"))
+
+(package! holo-layer :recipe (:host github
+                              :repo "manateelazycat/holo-layer"
+                              :files ("*")))

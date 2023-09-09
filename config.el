@@ -156,37 +156,61 @@
 ;;         "~/.config/emacs/.local/etc/node/node_modules/mathjax-node-cli/bin/tex2svg"))
 
 
-  (defun linw1995/pdm-get-python-executable (&optional dir)
-    (let ((pdm-get-python-cmd "pdm info --python"))
-      (string-trim
-       (shell-command-to-string
-        (if dir
-            (concat "cd "
-                    dir
-                    " && "
-                    pdm-get-python-cmd)
-          pdm-get-python-cmd)))))
+(defun lampze/pdm-get-venv-path (&optional dir)
+  (let ((pdm-get-python-cmd "pdm venv --path in-project"))
+    (car (split-string (string-trim
+                        (shell-command-to-string
+                         (if dir
+                             (concat "cd "
+                                     dir
+                                     " && "
+                                     pdm-get-python-cmd)
+                           pdm-get-python-cmd ))) "\n"))))
 
-  (defun linw1995/pdm-get-packages-path (&optional dir)
-    (let ((pdm-get-packages-cmd "pdm run bash -c 'printenv PEP582_PACKAGES'"))
-      (concat (string-trim
-               (shell-command-to-string
-                (if dir
-                    (concat "cd "
-                            dir
-                            " && "
-                            pdm-get-packages-cmd)
-                  pdm-get-packages-cmd)))
-              "/lib")))
+  ;; (defun linw1995/pdm-get-packages-path (&optional dir)
+  ;;   (let ((pdm-get-packages-cmd "pdm run bash -c 'printenv PEP582_PACKAGES'"))
+  ;;     (concat (string-trim
+  ;;              (shell-command-to-string
+  ;;               (if dir
+  ;;                   (concat "cd "
+  ;;                           dir
+  ;;                           " && "
+  ;;                           pdm-get-packages-cmd)
+  ;;                 pdm-get-packages-cmd)))
+  ;;             "/lib")))
 
-(use-package! lsp-pyright
-  :ensure t
-  :hook (python-mode . (lambda ()
-                         (setq lsp-pyright-extra-paths (vector (linw1995/pdm-get-packages-path)))
-                         (setq lsp-pyright-auto-search-paths (linw1995/pdm-get-python-executable))
-                         (setq lsp-pyright-venv-path (linw1995/pdm-get-python-executable))
-                          (require 'lsp-pyright)
-                          (lsp))))
+(defun lampze/pdm-project-p ()
+    "Return true if in pdm project."
+    (if (eq (with-temp-buffer (call-process "pdm" nil (current-buffer) nil "info"))
+            0)
+        t nil))
+
+(defun lampze/pdm-activate ()
+  (when (lampze/pdm-project-p)
+    (pyvenv-activate (lampze/pdm-get-venv-path))))
+
+(add-hook! 'python-mode-hook #'lampze/pdm-activate)
+
+
+(use-package! holo-layer
+  :config
+  (setq holo-layer-enable-cursor-animation t
+        holo-layer-enable-place-info t
+        holo-layer-cursor-alpha 100
+        holo-layer-cursor-animation-interval 25
+        holo-layer-cursor-animation-type "jelly easing"
+        holo-layer-python-command "/usr/bin/python")
+  (holo-layer-enable))
+
+
+;; (use-package! lsp-pyright
+;;   :ensure t
+;;   :hook (python-mode . (lambda ()
+;;                          (if (eq (shell-command "pdm info") 0)
+;;                            (setq lsp-pyright-extra-paths (vector (linw1995/pdm-get-packages-path))
+;;                                  lsp-pyright-venv-path (lampze/pdm-get-venv-path))
+;;                            (setq lsp-pyright-extra-paths (vector)
+;;                                  lsp-pyright-venv-path nil)))))
 
 
 (use-package! org-fragtog
