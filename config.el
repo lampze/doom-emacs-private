@@ -227,7 +227,7 @@
         rime-show-candidate 'posframe)
   :custom
   (default-input-method "rime")
-  (rime-emacs-module-header-root "/usr/include/emacs-28-vcs"))
+  (rime-emacs-module-header-root "/usr/include/emacs-29"))
 
 
 (use-package! multiple-cursors
