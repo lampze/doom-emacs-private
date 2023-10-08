@@ -30,9 +30,21 @@
 ;; wasn't installed correctly. Font issues are rarely Doom issues!
 (setq doom-font (font-spec :family "iosevka" :size 26)
       doom-variable-pitch-font (font-spec :family "iosevka" :size 26)
-      doom-big-font (font-spec :family "iosevka" :size 26)
+      ;; doom-big-font (font-spec :family "iosevka" :size 30)
       ;; doom-symbol-font (font-spec :family "WenQuanYi Micro Hei Mono" :size 26)
-      doom-serif-font (font-spec :family "WenQuanYi Micro Hei Mono" :size 26))
+      ;; doom-serif-font (font-spec :family "WenQuanYi Micro Hei Mono" :size 26)
+      )
+
+;; Set font for chinese characters
+;; Font should be twice the width of asci chars so that org tables align
+;; This will break if run in terminal mode, so use conditional to only run for GUI.
+(defun my-cjk-font()
+  (if (display-graphic-p)
+      (dolist (charset '(kana han cjk-misc bopomofo))
+        (set-fontset-font (frame-parameter nil 'font)
+                          charset (font-spec :family "WenQuanYi Micro Hei Mono")))))
+
+(add-hook 'after-setting-font-hook #'my-cjk-font)
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -45,7 +57,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+(setq org-directory "~/.org/")
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
