@@ -28,8 +28,8 @@
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
 ;; refresh your font settings. If Emacs still can't find your font, it likely
 ;; wasn't installed correctly. Font issues are rarely Doom issues!
-(setq doom-font (font-spec :family "iosevka" :size 26)
-      doom-variable-pitch-font (font-spec :family "iosevka" :size 26)
+(setq doom-font (font-spec :family "iosevka" :size 40)
+      doom-variable-pitch-font (font-spec :family "iosevka" :size 40)
       ;; doom-big-font (font-spec :family "iosevka" :size 30)
       ;; doom-symbol-font (font-spec :family "WenQuanYi Micro Hei Mono" :size 26)
       ;; doom-serif-font (font-spec :family "WenQuanYi Micro Hei Mono" :size 26)
@@ -49,7 +49,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-homage-white)
+(setq doom-theme 'modus-operandi)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -124,7 +124,14 @@
 
       vertico-posframe-parameters '((left-fringe . 8)
                                     (right-fringe . 8))
+
+      org-latex-preview-numbered t
+
+      lsp-volar-take-over-mode nil
       )
+
+(let ((pos (assoc 'dvisvgm org-latex-preview-process-alist)))
+  (plist-put (cdr pos) :image-converter '("dvisvgm --page=1- --optimize --clipjoin --relative --no-fonts --bbox=preview -o %B-%%9p.svg %f")))
 
 
 (set-email-account! "qq"
@@ -170,7 +177,57 @@
             "ESC <left>" 'org-metaleft))
 
 
+;; web-mode setup
+(define-derived-mode vue-mode web-mode "Vue")
+(add-to-list 'auto-mode-alist '("\\.vue\\'" . vue-mode))
+(add-to-list 'exec-path "~/.local/bin")
+
+(defun vue-eglot-init-options ()
+  (let ((tsdk-path (expand-file-name
+                    "lib"
+                    (string-trim-right (shell-command-to-string "npm list --global --parseable typescript | head -n1")))))
+    `(:typescript (:tsdk ,tsdk-path
+                         ;; :languageFeatures (:completion
+                         ;;                    (:defaultTagNameCase "both"
+                         ;;                     :defaultAttrNameCase "kebabCase"
+                         ;;                     :getDocumentNameCasesRequest nil
+                         ;;                     :getDocumentSelectionRequest nil)
+                         ;;                    :diagnostics
+                         ;;                    (:getDocumentVersionRequest nil))
+                         ;; :documentFeatures (:documentFormatting
+                         ;;                    (:defaultPrintWidth 100
+                         ;;                     :getDocumentPrintWidthRequest nil)
+                         ;;                    :documentSymbol t
+                         ;;                    :documentColor t)
+                         )
+      :vue (:hybridMode :json-false)
+      )))
+
+;; Volar
+(set-eglot-client! 'vue-mode
+                   `("vue-language-server" "--stdio"
+                     :initializationOptions ,(vue-eglot-init-options)))
+;; (set-eglot-client! 'vue-mode
+;;                    `("typescript-language-server" "--stdio"
+;;                      :initializationOptions (:plugins [(:name "@vue/typescript-plugin"
+;;                                                         :location "/home/shirui/.local/lib64/node_modules/@vue/language-server"
+;;                                                         :language ["vue"])]
+;;                                                       :preferences (:interactiveInlayHints :json-false)
+;;                                                       :tsserver (:logVerbosity "verbose"
+;;                                                                  :trace "verbose"))))
+
+
 (use-package! guess-word)
+
+
+;; (use-package sqlite-mode-extras
+;;   :bind (:map
+;;          sqlite-mode-map
+;;          ("n" . next-line)
+;;          ("p" . previous-line)
+;;          ("<backtab>" . sqlite-mode-extras-backtab-dwim)
+;;          ("<tab>" . sqlite-mode-extras-tab-dwim)
+;;          ("RET" . sqlite-mode-extras-ret-dwim)))
 
 
 (use-package! zotxt
@@ -223,6 +280,11 @@
 
 (add-hook! 'python-mode-hook #'lampze/pdm-activate)
 
+(use-package! go-translate
+  :config
+  (setq gt-langs '(en zh)
+        gt-default-translator (gt-translator :engines (gt-youdao-dict-engine))))
+
 
 (use-package! holo-layer
   :config
@@ -245,11 +307,11 @@
 ;;                                  lsp-pyright-venv-path nil)))))
 
 
-(use-package! org-fragtog
-  :defer t
-  :hook (org-mode .  org-fragtog-mode)
-  :config
-  (plist-put org-format-latex-options :scale 3.0))
+;; (use-package! org-fragtog
+;;   :defer t
+;;   :hook (org-mode .  org-fragtog-mode)
+;;   :config
+;;   (plist-put org-format-latex-options :scale 3.0))
 
 
 (use-package! rime
@@ -413,7 +475,7 @@
 
 
 (set-company-backend! 'org-mode
-  '(:separate  company-math-symbols-latex company-latex-commands))
+                      '(:separate  company-math-symbols-latex company-latex-commands))
 
 (defun daviwil/org-roam-filter-by-tag (tag-name)
   (lambda (node)
