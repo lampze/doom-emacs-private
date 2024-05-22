@@ -130,6 +130,8 @@
       lsp-volar-take-over-mode nil
       )
 
+(setq-hook! 'python-mode-hook +format-with 'ruff)
+
 (let ((pos (assoc 'dvisvgm org-latex-preview-process-alist)))
   (plist-put (cdr pos) :image-converter '("dvisvgm --page=1- --optimize --clipjoin --relative --no-fonts --bbox=preview -o %B-%%9p.svg %f")))
 
